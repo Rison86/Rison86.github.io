@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>创想家</title>
+		<link rel="stylesheet" href="css/animate.css"/>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+		<style>
+
+
+		
+			/*============================================*/
+    			body{margin:0;padding:0;background:#000;font-size:14px;font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+		    form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+		    img{border:0;}
+		    ul,li{list-style-type:none;}
+		    a{color:#00007F;text-decoration:none;}
+		    a:hover{text-decoration:none;}
+		    /*===========================================*/
+		   
+		   
+		   
+		   
+		 .background{background-image: url(images/bgimage.jpg);
+		 			height:800px;background-size:100% 100%;z-index: -5;}
+		 .box{margin: 0 auto;
+		 	  height: 208px;width: 208px;
+		 	  top: 150px;position: relative;
+		 	  animation: box 2s 3.5s;z-index: 1;}
+		 .blue_bg{width: 208px;height:211px;
+		 		  position: absolute;
+		 		  animation: blue_bg 1s 0.5s;}
+		 .red{width:98px ;height:208px;
+		 	  position: absolute;
+		 	  animation: red 1s 0.5s;}
+		 .yellow{width:208px;height:125px;
+		 		position: absolute;top: 83px;
+		 		animation: yellow 1s 0.5s;}
+		 .s_blue_d{width: 44px;height: 59px;
+		 			position: absolute;top:76px;
+		 			z-index: 8;
+		 			animation: s_blue_d 2s 0.5s;}
+		 .s_gary_jiao{width: 51px;height: 108px;
+		 			  z-index: 5;position: absolute;
+		 			   top:48px;left:48px;
+		 			   animation: s_gary_jiao 2s 0.5s;}
+		 .s_gary_top{width: 26px;height: 110px; 
+		 			 position: absolute;left:112px;
+		 			 z-index: 6;
+		 			 animation: s_gary_top 1.5s 0.5s;}
+		 .s_green{width: 56px;height: 181px;
+		 		  position: absolute;
+		 		  left:82px;z-index: 7;
+		 		  animation: s_green 1.5s 0.5s;}
+		 .s_blue_di{width: 151px;height: 83px;
+		 		 	position: absolute;z-index: 8;
+		 		 	bottom:0px;right:0px;
+		 		 	animation: s_blue_di 2s 0.5s;}
+	
+		 .r_am{width: 160px;height:137px ;
+		 	   position: absolute;z-index: 8;
+		 	   top:71px;left:48px;
+		 	   animation: r_am 2s 0.5s;}
+		 .big_e{width: 29px;height:60px;
+		 	 	position:absolute;
+		 	 	top:76px;left: 82px;
+		 	 	z-index: 8;
+		 	 	animation: big_e 2s 0.5s;}
+		 .s_red_dian{width: 15px; height:17px;
+		 	 	  	 position: absolute;
+		 	 	  	 top:85px;left:57px;
+		 	 	  	 z-index: 15;
+		 	 	  	 animation: s_red_dian 3s 0.5s;}
+		 .big_d{width: 26px;height: 42px;
+		 	 	position: absolute;
+		 	 	top:85px;left: 9px;
+		 	 	 z-index: 7;
+		 	 	 animation: big_d 3s 0.5s;}
+		 .word{animation: word 3s 0.5s;}
+		 	 	 
+		 .m{width: 30px;height: 31px;position: absolute;z-index: 10;bottom: 0px;right: 100px;}
+		 .a{width: 23px;height: 25px;position: absolute;z-index: 10;bottom: 0px;right: 75px;}
+		 .k{width: 23px;height: 25px;position: absolute;z-index: 10;bottom: 0px;right: 50px;}
+		 .e{width: 23px;height: 25px;position: absolute;z-index: 10;bottom: 0px;right: 25px;}
+		 .r{width: 23px;height: 25px;position: absolute;z-index: 10;bottom: 0px;right: 0px;}
+		 .star1{width: 50px;height: 100px;position: absolute;top: 450px;left: 150px;}
+		 .star2{width: 50px;height: 100px;position: absolute;top: 150px;right: 250px;}
+		 .star3{width: 50px;height: 100px;position: absolute;top: 150px;left: 250px;}
+		 .star1{animation: star1 1s  infinite;}
+		 .star2{animation: star2 1s  infinite;}
+		 .star3{animation: star3 1s  infinite;}
+		 @keyframes star1{
+		 	0%{transform: translatex(550px);}
+		 	100%{transform: translatex(0px);opacity: 0;}
+		 }
+		 @keyframes star2{
+		 	0%{left:200;right: 150px;}
+		 	100%{left:0px;right: 0px;opacity: 0;}
+		 }
+		 
+		 @keyframes star3{
+		 	0%{left:200;right: 150px;}
+		 	100%{left:0px;right: 0px;opacity: 0;}
+		 }
+		 
+		 @keyframes blue_bg{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(2);opacity: 1;left:270px;}
+		 	100%{transform: scale(1);opacity: 1;left:0px;}
+		 }
+		  @keyframes red{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(1.5);opacity: 1;left:-270px;}
+		 	100%{transform: scale(1);opacity: 1;left:0px;}
+		 }
+		  @keyframes yellow{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(0.7);opacity: 0.7;top:570px;}
+		 	100%{transform: scale(1);opacity: 1;bottom:0px;}
+		 }
+		  @keyframes s_blue_d{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(1);opacity: 1;top:-300px;}
+		 	100%{transform: scale(1);opacity: 1;top:76px;}
+		 }
+		  @keyframes s_gary_jiao{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(1);opacity: 1;top:-450px;right:55px;}
+		 	100%{transform: scale(1);opacity: 1;right:48px;top: 48px;}
+		 }
+		  @keyframes s_gary_top{
+		 	0%{opacity: 0;}
+		 	50%{transform: translate(-350px,150px) scale(2);opacity: 1;top:-450px;right:55px}
+		 	100%{transform: translate(0px,0px) scale(1);opacity: 1;right:15px;top: 0px;}
+		 }
+		  @keyframes s_green{
+		 	0%{opacity: 0;}
+		 	50%{transform: translate(-350px,150px) scale(2); opacity: 0.7;}
+		 	100%{transform: translate(0px,0px) scale(1); opacity: 1;}
+		 }
+		  @keyframes s_blue_di{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(1.5) translate(400px,300px);opacity: 0.5;}
+		 	100%{transform: scale(1) translate(0px,0px);opacity: 1;}
+		 }
+		 @keyframes r_am{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(2) translate(400px,-300px);opacity: 0.2;}
+		 	100%{transform: scale(1) translate(0px,0px);opacity: 1;}
+		 }
+		 @keyframes big_e{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(2) translate(300px,-250px);opacity: 0.2;}
+		 	100%{transform: scale(1) translate(0px,0px);opacity: 1;}
+		 }
+		 @keyframes s_red_dian{
+		 	0%{opacity: 0;}
+		 	10%{transform: scale(2) rotatez(510deg) translate(300px,-250px);opacity: 1;}
+		 	30%{transform: scale(1) rotatez(0deg) translate(0px,0px);opacity: 1;}
+		 	50%{left:370px;right: 250px;}
+		 	70%{left:370px;right: 250px;}
+		 	85%{left:0px;right: 50px;}
+		 	90%{left:0px;right: 0px;}
+		 	95%{left:80px;}
+		 	100%{left:57px;}
+		 }
+		 @keyframes big_d{
+		 	0%{opacity: 0;}
+		 	50%{transform: scale(2) rotatez(510deg) translate(250px,-250px);opacity: 1;left:370px;}
+		 	100%{transform: scale(1) rotatez(0deg) translate(0px,0px);opacity: 1;left:0px;}
+		 }
+		 @keyframes word{
+		 	0%{opacity: 0;}
+		 	50%{transform:rotatex(350deg) scale(2) translate(-540px,250px);opacity: 1;}
+		 	100%{transform:rotatex(0deg) scale(1) translate(0px,0px);opacity: 1;}
+		 }
+		 @keyframes box{
+		 	0%{transform:rotatex(360deg) rotatez(360deg);}
+		 	100%{transform:rotatex(0deg) rotatez(0deg);}
+		 }
+		 footer{width: 150px;height: 150px;margin: 0 auto;}
+		 .footer{width: 150px;height: 150px;color: white;position: fixed;bottom: 1px;text-align: center;}
+		 .music{position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div class="background">
+			<div class="box">
+				
+				<img class="blue_bg"src="images/blue_bg.png"/>
+				<img class="red" src="images/red_bg.png"/>
+				<img class="yellow" src="images/yellow_bg.png"/>
+				<img  class="s_blue_d" src="images/s_blue_d.png" alt="">
+				<img class="s_gary_jiao"src="images/s_gary_jiao.png" alt="">
+				<img class="s_gary_top" src="images/s_gary_top.png" alt="">
+				<img class="s_green" src="images/s_green.png" alt="">
+				<img class="s_blue_di" src="images/s_blue_di.png" alt="">
+				<img class="r_am" src="images/r_am.png" alt="">
+				<img class="big_e" src="images/big_e.png" alt="">
+				<img class="s_red_dian" src="images/s_red_dian.png" alt="" />
+				<img class="big_d" src="images/big_d.png" alt=""/>
+			
+						<img class="m  word" src="images/m.png" alt="">
+						<img class="a  word" src="images/a.png" alt="">
+						<img class="k  word" src="images/k.png" alt="">
+						<img class="e  word" src="images/e.png" alt="">
+						<img class="r  word" src="images/r.png" alt="">
+				
+			</div>
+				<img class="star1" src="images/star_green.png"/>
+				<img class="star2" src="images/star_red.png"/>
+				<img class="star3" src="images/star_yellow.png"/>
+		</div>
+		<footer>
+			<div class="footer">
+				<h3>2015</h3>
+				<h2>创想家盛典</h2><img src="images/button_next.png"/>
+			</div>
+			
+		</footer>
+		<img src="img/button_next.png" alt="" /class="button">
+				<img src="images/music_off.png" alt="" class="music" id="off" onclick="offbtn()">
+				<img src="images/music_img.png" alt="" class="music" id="on" onclick="onbtn()">
+				<audio src="music/Shiftone_1.18.mp3" autoplay loop id="audio"></audio>
+			</div>
+		</div>
+		<script type="text/javascript">
+				var off=document.getElementById("off");
+				var on=document.getElementById("on");
+				var music=document.getElementById("audio");
+				function onbtn(){
+				off.style.display="block";
+				on.style.display="none";
+				audio.pause();
+				}
+			    function offbtn(){
+				on.style.display="block";
+				off.style.display="none";
+				audio.play();
+				music.currentTime=0;
+				}
+		</script>
+	</body>
+</html>
