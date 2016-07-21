@@ -105,7 +105,8 @@ body {
 	text-align: center;
 	width: 100%;
 	color: #666;   
-	margin-bottom: 15px;
+	margin-bottom: 35px;
+	padding-bottom: 15px
 }
 
 #errorMsg {
