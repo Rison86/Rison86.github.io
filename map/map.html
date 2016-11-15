@@ -15,14 +15,14 @@
     <title>同时加载两个地图</title>
 </head>
 <body>
-    <div id="map1_container"><div id="allmap1 allmap22"></div></div>
-    <div id="map2_container"><div id="allmap2"></div></div>
+    <div id="map1_container"><div id="allmap1"></div></div>
+    <div id="map2_container"><div id="allmap2 allmap22"></div></div>
 </body>
 </html>
 <script type="text/javascript">
     //百度地图API功能
     //加载第一张地图
-    var map1 = new BMap.Map("allmap22");            // 创建Map实例
+    var map1 = new BMap.Map("allmap1");            // 创建Map实例
     var point1 = new BMap.Point(116.404, 39.915);  
     map1.centerAndZoom(point1,15);               
     map1.enableScrollWheelZoom();                  //启用滚轮放大缩小
@@ -40,7 +40,7 @@
     
     //创建地图函数：
     function createMap(){
-        var map = new BMap.Map("allmap2");//在百度地图容器中创建一个地图
+        var map = new BMap.Map("allmap22");//在百度地图容器中创建一个地图
         var point = new BMap.Point(116.305443,39.93146);//定义一个中心点坐标
         map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
