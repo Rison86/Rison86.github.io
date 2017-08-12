@@ -1,121 +1,165 @@
-﻿<!DOCTYPE HTML>
-    <head>
-        <title>-Our Love Story-</title>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <style type="text/css">
-            @font-face {
-                font-family: digit;
-                src: url('digital-7_mono.ttf') format("truetype");
-            }
-            a:hover{color: cyan;}
-        </style>
-        <link href="style/default.css" type="text/css" rel="stylesheet">
-        <script type="text/javascript" src="style/jquery.js"></script>
-        <script type="text/javascript" src="style/garden.js"></script>
-        <script type="text/javascript" src="style/functions.js"></script>
-    </head>
+<!DOCTYPE HTML>
 
-    <body>
-        <div id="mainDiv">
-            <div id="content">
-                <div id="code">
-                    <span class="comments">/**</span><br />
-                    <span class="space" /><span class="comments">* We all live in Beijing ,We are both fucking trust some people 2 much</span><br />
-                   <span class="space" /><span class="comments">* So I write this code to show you.</span><br />
-                    <span class="space" /><span class="comments">* I really want to be with you together.</span><br />
-                    <span class="space" /><span class="comments">*/</span><br /> Boy i = <span class="keyword">Handsome</span> Boy(<span class="string">"Rison Guan"</span>);<br /> Girl u = <span class="keyword">Pretty</span> Girl(<span class="string">"Lucy"</span>);<br />
-                    <span class="comments">// July 19, 2017, You told me u wanna walking into my life since u see my photo. </span><br /> So on this moment i want to tell something';
-                    <br />
-                    <span class="comments">//...U konw, When U say the "We can take the knowledge"<br />// I really want to know u and I feel I like u (shy..)</span><br /> u.saySomething();
-                    <br />
-                    <span class="comments">// Since then, <br />// We both know open each other locked heart is very difficult; .</span><br />
-                    <span class="keyword">var</span> reason=i.Tell(u);<br />
-                    <span class="comments">// If I have some hope I never give this fucking up.
-                    <br />// I don't care about some fucking lost .
-                    <br />// I just know u never try u never know .</span><br />
-                    $("body").append(reason);
-                    <br />
-                    <span class="comments">// I very scare U say that it is<br />//  Too fucking quickily to turn our relation of lover.</span><br />
-                    <span class="comments">// And plz take care of u and our love.</span><br />So now i always want to tell(u);
-                    <br />
-                     i.takeCareOf(u);
-                    <br />
-                    <span class="comments">// Now my 'Rison' wanna u 'Lucy' be my girlfriend</span><br />
-                    <span class="keyword">boolean</span> isAccept = <span class="keyword">false</span>;<br />
-                    <span class="keyword">while</span> (isAccept) {<br />
-                    <span class="placeholder" />i.waitFor(u);<br />
-                    <span class="placeholder" /><span class="comments">// I think it is an important decision</span><br />
-                    <span class="placeholder" /><span class="comments">// And you should forgot the unhappy things</span><br />
-                     <span class="placeholder" /><span class="comments">// And some badgay that happended before.</span><br />
-                     <span class="placeholder" /><span class="comments">// Why bcz Happiness life just beginning </span><br />
-                    <span class="placeholder" />isAccept = u.thinkOver();<br /> }
-                    <br />
-                    <span class="comments">// After a please sound of accept. <br />// We will live happily ever after. <br />// I will always be beside you and guarding you.
-                    <br /> // You always be my baby my sweet heart. </span><br /> u.accept(i);
-                    <br /> i.liveHappilyWith(u);
-                    <br />
+<head>
+	<title>森哥婷姐新婚快乐</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
 
-                </div>
-                <div id="loveHeart">
-                    <canvas id="garden"></canvas>
-                    <div id="words">
-                        <div id="messages" style=" text-align: center;">
+		a:hover {
+			color: cyan;
+		}
 
-                            Lucy, I want you to be my girlfriend <br>
-                            <div id="elapseClock" style="display:none"></div>
-                            <a href='#' id="accept">click me if accept me</a>
-                        </div>
-                        <div id="loveu" style=" text-align: center;margin: 80px auto;">
-                            Take care of you & Protect you.<br/>
-                            <div class="signature">- Rison </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="copyright">
-                by:
-                <a href="http://www.rison.site/get/get.html">Rison 86</a><br />
-            </div>
-        </div>
-        <div class="yinyue">
-            <audio controls autoplay>
-            <!-- <source src="horse.ogg" type="audio/ogg"> -->
-            <source src="2.mp3" type="audio/mpeg">
+		html {
+			font-size: 62.5%;
+			/*10 ÷ 16 × 100% = 62.5%*/
+		}
 
-            </audio
-        </div>
-         <script type="text/javascript">
-            var offsetX = $("#loveHeart").width() / 2;
-            var offsetY = $("#loveHeart").height() / 2 - 55;
+		body {
+			font-size: 5rem;
+			/*1.4 × 10px = 14px */
+		}
 
-            if(!document.createElement('canvas').getContext) {
-                var msg = document.createElement("div");
-                msg.id = "errorMsg";
-                msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
-                document.body.appendChild(msg);
-                $("#code").css("display", "none")
-                $("#copyright").css("position", "absolute");
-                $("#copyright").css("bottom", "10px");
-                document.execCommand("stop");
-            } else {
-                setTimeout(function() {
-                    adjustWordsPosition();
-                    startHeartAnimation();
-                }, 10000);
+		span {
+			font-size: 2.4rem;
+			/*2.4 × 10px = 24px*/
+		}
 
-                $("#accept").click(function() {
-                    $(this).hide();
-                    $("#elapseClock").show();
-                    var together = new Date(2017, 6, 19, 9, 18);
-                    timeElapse(together);
-                    setInterval(function() {
-                        timeElapse(together);
-                    }, 500);
-                })
-                adjustCodePosition();
-                $("#code").typewriter();
-            }
-        </script>
-    </body>
+		span {
+			font-size: 5rem;
+			font-family: Arial, sans-serif;
+			/*2.4 × 10px = 24px*/
+		}
+    .sbshow{
+      /*display: none;*/
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+	</style>
+	<link href="style/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="style/jquery.js"></script>
+	<script type="text/javascript" src="style/garden.js"></script>
+	<script type="text/javascript" src="style/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space" /><span class="comments">* 首先森哥！</span><br />
+				<span class="space" /><span class="comments">* 婷姐！</span><br />
+				<span class="space" /><span class="comments">* 新婚快乐！</span><br />
+				<span class="space" /><span class="comments">*/</span><br />新郎= <span class="keyword">帅气的</span> 孙鹏森(<span class="string">"森碧"</span>);<br />新娘= <span class="keyword">漂亮的</span> 任婷婷(<span class="string">"婷姐"</span>);<br />
+				<span class="comments">// 8 月 13 号, 2017, 喜结连理 </span><br /> 希望你们两个幸福美满开心快乐;
+				<br />
+				<span class="comments">// 认识森哥十年了。十年了<br />// 一起去长白山看过水怪。。"<br />// 去张家界看过阿凡达</span><br /> // 去雷峰塔看过蛇精;
+        <br /> // 去过大明湖看过夏雨荷;
+				<br /> //  吃过100快的麻辣烫，
+        <br /> //  吃过无数吃的巨无霸
+        <br /> //  傻逼到买甜筒吃过拉肚💩
+				<span class="comments">// , <br />// 但这些事情都不及森哥跟你每天简单的在家看个电视开心。; .</span>
+        <br />我知道森哥真的开始稳定了
+        <br ／>
+				<span class="keyword">我曾问过森。</span> 想好了嘛，他说他真的想好了，很喜欢很想走下一步，也是到时候在一起。<br />
+				<span class="comments">// 完全没有想到是这么快就结婚。因为真的没有想到婷姐你俩来的这么快哈哈哈。说实话婚姻对于我来说是多么的遥远与恐惧。
+                    <br />// 所以我在这里希望你们俩互相照顾。
+                    <br />// 包容毕竟，世界那么大你俩相遇很不容易
+                    <br />// 我认识森哥真的太久了。
+                    <br />// 所以很是担心森哥跟我一样哈哈。
+                    <br />// 但是婷姐在我心目中的印象绝对是100分。
+                    <br />// 真的还是很感谢你们俩在我人生最低谷的时候帮助了我.
+                    <br />// 我说过我没有森哥就没有现在的我 .</span><br /> 我俩从高中跑步接力一直到现在为他加油鼓励。我很希望他能幸福。;
+				<br />
+				<span class="comments">// 这二逼现在他娶到婷姐真很幸运啊哈哈
+          <br />//  婷姐给我的印象简直好到爆炸.</span><br />
+				<span class="comments">// 婷姐知道我刚回国的时候没有钱.</span><br />出去吃饭的时候都让森哥结算因为他 <span style="color:red">有钱</span><span style="color:blue">太尼玛有钱了哈哈哈</span> 哈哈;
+				<br /> 他脾气很犟希望婷姐能包容他小孩二逼的一面。
+				<br />
+				<span class="comments">// 说到底我还是很开心森哥能走到这一步的。</span><br />
+				<span class="keyword">现在这个</span> 二傻子 = <span class="keyword">在玩手机</span>;<br />
+				<span class="keyword">希望你俩之后的路都顺顺利利</span><br />
+				<span class="placeholder" /> 开开心心<br />
+				<span class="placeholder" /><span class="comments">// 预祝Turkey之行圆满完成</span><br />
+				<span class="placeholder" /><span class="comments">// 希望森哥之后的事业圆满顺利</span><br />
+				<span class="placeholder" /><span class="comments">// 希望婷姐之后的事业愉快而轻松.</span><br />
+				<span class="placeholder" /><span class="comments">// 希望你们俩个二傻子的婚姻幸福美满 </span><br />
+				<span class="placeholder" />夫妻生活和谐<br /> }
+				<br />
+				<span class="comments">// 最后代表我的孩子 <br />// 请求你俩留条活路. <br />// 永远支持跟帮助你们的二傻子86.
+                    <br /> // 永远帅气的我. </span><br /> Rison;
+				<br /> 8月13号03:26;
+				<br />
+			</div>
+			<!-- <div id="loveHeart"> -->
+				<!-- <canvas id="garden"></canvas> -->
+				<!-- <div id="words" style="display:none;">
+					<div id="messages" style=" text-align: center;">
+
+						Lucy, I want you to be my girlfriend <br>
+						<div id="elapseClock" style="display:none"></div>
+						<a href='#' id="accept">click me if accept me</a>
+					</div>
+					<div id="loveu" style=" text-align: center;margin: 80px auto;">
+						Take care of you & Protect you.<br/>
+						<div class="signature">- Rison </div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<!-- <div id="copyright">
+			by:
+			<a href="###">Rison 86</a><br />
+		</div> -->
+	</div>
+  <!-- <a class="sbshowaa">最后福利是点击这里看福利</a>
+  <img src="sbsen.jpg" class="sbshow" alt=""> -->
+	<div class="yinyue" style="display:none; position: fixed; bottom: 0; overflow:hidden;">
+		<audio controls autoplay >
+			<source src="horse.ogg" type="audio/ogg">
+			<source src="MarryYou.mp3" type="audio/mpeg">
+		</audio>
+  </div>
+
+		<script type="text/javascript">
+			// var offsetX = $("#loveHeart").width() / 2;
+			// var offsetY = $("#loveHeart").height() / 2 - 55;
+
+			// if(!document.createElement('canvas').getContext) {
+			//     var msg = document.createElement("div");
+			//     msg.id = "errorMsg";
+			//     msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			//     document.body.appendChild(msg);
+			//     $("#code").css("display", "none")
+			//     $("#copyright").css("position", "absolute");
+			//     $("#copyright").css("bottom", "10px");
+			//     document.execCommand("stop");
+			// } else {
+			setTimeout(function() {
+				adjustWordsPosition();
+				// startHeartAnimation();
+			}, 8000);
+      // $('.sbshowaa').click(function(){
+      //   console.log(111);
+      // })
+			// $("#accept").click(function() {
+			//     $(this).hide();
+			//     $("#elapseClock").show();
+			//     var together = new Date(2017, 6, 19, 9, 18);
+			//     timeElapse(together);
+			//     setInterval(function() {
+			//         timeElapse(together);
+			//     }, 500);
+			// })
+			// adjustCodePosition();
+			$("#code").typewriter();
+			// }
+		</script>
+</body>
 
 </html>
