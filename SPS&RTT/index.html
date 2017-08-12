@@ -127,6 +127,16 @@
   </div>
 
 		<script type="text/javascript">
+
+    window.onload=function(){
+      setTimeout(function() {
+				adjustWordsPosition();
+				// startHeartAnimation();
+			}, 8000);
+      $("#code").typewriter();
+      
+      //do something
+}
 			// var offsetX = $("#loveHeart").width() / 2;
 			// var offsetY = $("#loveHeart").height() / 2 - 55;
 
@@ -140,10 +150,7 @@
 			//     $("#copyright").css("bottom", "10px");
 			//     document.execCommand("stop");
 			// } else {
-			setTimeout(function() {
-				adjustWordsPosition();
-				// startHeartAnimation();
-			}, 8000);
+
       // $('.sbshowaa').click(function(){
       //   console.log(111);
       // })
@@ -157,7 +164,6 @@
 			//     }, 500);
 			// })
 			// adjustCodePosition();
-			$("#code").typewriter();
 			// }
 		</script>
 </body>
