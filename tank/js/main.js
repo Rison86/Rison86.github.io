@@ -29,10 +29,10 @@ var homeProtectedTime = -1;
 var propTime = 300;
 
 $(document).ready(function(){
-	
+
 	initScreen();
 	initObject();
-	
+
 	setInterval(gameLoop,20);
 });
 
@@ -56,7 +56,7 @@ function initScreen(){
 	$("#canvasDiv").css({"width":SCREEN_WIDTH});
 	$("#canvasDiv").css({"height":SCREEN_HEIGHT});
 	$("#canvasDiv").css({"background-color":"#000000"});
-	
+
 }
 
 function initObject(){
@@ -86,7 +86,7 @@ function initObject(){
 
 function gameLoop(){
 	switch(gameState){
-	
+
 	case GAME_STATE_MENU:
 		menu.draw();
 		break;
@@ -201,7 +201,7 @@ function keyEvent(){
 		player1.hit = false;
 		player1.move();
 	}
-	
+
 	if(keys.contain(keyboard.UP)){
 		player2.dir = UP;
 		player2.hit = false;
@@ -219,7 +219,7 @@ function keyEvent(){
 		player2.hit = false;
 		player2.move();
 	}
-	
+
 }
 
 function addEnemyTank(){
@@ -237,7 +237,7 @@ function addEnemyTank(){
 		obj = new EnemyThree(tankCtx);
 	}
 	obj.x = ENEMY_LOCATION[parseInt(Math.random()*3)] + map.offsetX;
-	obj.y = map.offsetY;	
+	obj.y = map.offsetY;
 	obj.dir = DOWN;
 	enemyArray[enemyArray.length] = obj;
 	//更新地图右侧坦克数
