@@ -181,6 +181,7 @@ a img {
 .demo-1 body {
 	color: #87968e;
 	background: #fff2e3;
+	overflow: hidden;
 }
 
 .demo-1 a {
@@ -308,7 +309,7 @@ a img {
 		width: 100%;
 		min-width: auto;
 		min-height: auto;
-		padding: 1em; 
+		padding: 1em;
 	}
 
 	.column p {
