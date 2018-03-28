@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>文档概述_短信验证码api介绍_短信通知api_短信营销api介绍</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/common/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html,body{
+            font-family: "微软雅黑",'Microsoft YaHei';
+        }
+    </style>
+</head>
+<body>
+<div class="ui-page">
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" class="logo fl"><img src="images/logo.png" alt="logo">合通启通信</a>
+            <ul class="nav_l fl">
+                <li><a href="index.html">首页</a></li>
+                <li>
+                    <a href="javascript:;">产品</a><i></i>
+                    <div class="secnav productnav">
+                        <div>
+                            <a href="sms.html">
+                                <img src="images/public/sms.png" alt="短信验证码">
+                                <p>短信验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="voice.html">
+                                <img src="images/public/voice.png" alt="语音验证码">
+                                <p>语音验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mobiltraffic.html">
+                                <img src="images/public/traffic.png" alt="手机流量">
+                                <p>手机流量</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li class="active">
+                    <a href="javascript:;">我的</a><i></i>
+                    <div class="secnav mynav">
+                        <div><a href="about.html"><em class="gsjj"></em>公司简介</a></div>
+                        <div><a href="joinus.html"><em class="zprc"></em>招聘人才</a></div>
+                        <div><a href="partner.html"><em class="hhr"></em>城市合伙人</a></div>
+                    </div>
+                </li>
+                <li><a href="wedoc.html">文档</a></li>
+            </ul>
+            <ul class="nav_r fr">
+                <li><a href="register.html">注册</a></li>
+                <span>|</span>
+                <li>
+                    <a href="sms.html">免费测试</a><i></i>
+                    <div class="secnav testnav">
+                        <div><a href="sms.html#testfree"><em class="dx"></em>短信验证码</a></div>
+                        <div><a href="voice.html#testfree"><em class="yy"></em>语音验证码</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="other-banner doc-banner">
+        <div class="banner-content">
+            <div class="fl">
+                <h3>短信</h3>
+                <p>提供专业的短信送达服务，包括验证码短信、通知短信、运营短信、语音验证码，覆盖三网，到达率高</p>
+                <a class="l-btn btn" href="javascript:;">免费体验</a>
+            </div>
+            <div id="doc-img" class="fr">
+                <div class="contain">
+                    <div class="layer_1"></div>
+                    <div class="layer_2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="deveBoxin clear">
+            <div class="deveList fl">
+                <h3>问题与文档</h3>
+                <ul>
+                    <li>
+                        <div class="deveSelect guideOpt">
+                            <i></i><a href="wedoc.html">开发指南</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="wedoc.html">新手指南</a>
+                            <a href="javascript:;">成为开发者</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect docOpt">
+                            <i></i><a href="docApi.html">API文档</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="docApi.html">文档概述</a>
+                            <a href="javascript:;" style="color:#2e3ac4;">返回码说明</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect faqOpt">
+                            <i></i><a href="docFAQ.html">常见问题</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="docFAQ.html#pt" style="color:#2e3ac4;">平台类</a>
+                            <a href="docFAQ.html#dx">短信类</a>
+                            <a href="docFAQ.html#yy">语音类</a>
+                            <a href="docFAQ.html#qt">其他</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect downOpt cur">
+                            <i></i><a href="javascript:;">下载中心</a>
+                        </div>
+                        <div class="selectLink" style="display: block;">
+                            <a href="apiCodeASP.html">ASP</a>
+                            <a href="apiCodeC.html">C#</a>
+                            <a href="apiCodeJava.html">JAVA</a>
+                            <a href="apiCodePython.html">PYTHON</a>
+                            <a href="apiCodePHP.html" style="color: #2e3ac4;">PHP</a>
+                            <a href="apiCodenet.html">VB.NET</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="deveDet fr">
+                <h2>代码示例</h2>
+                <div class="deveStep" id="cphp">
+                    <h2><i>PHP</i><a href="http://www.18sms.com/File/Document/SY_PHP_Demo.zip" class="downBtn">下载</a></h2>
+                    <pre>                        <div style="background:#eee;border:1px solid #ccc;padding:5px 10px;">&lt;?php<br>
+header('content-type:text/html;charset=utf-8');
+&nbsp;
+$sendUrl = 'http://send.18sms.com/msg/HttpBatchSendSM'; //短信接口的URL<br>&nbsp;
+$smsConf = array(<br>
+&nbsp;&nbsp; &nbsp;'account' =&gt; "test", //产品服务账号 用户中心-账户管理-产品服务 找到对应的账号与密码<br>
+&nbsp;&nbsp;&nbsp; 'pswd' =&gt; "test", //产品服务密码<br>
+&nbsp;&nbsp; &nbsp;'mobile' =&gt; "*********", //手机号码 多手机号用逗号分隔如 13300000000,13200000000<br>
+&nbsp;&nbsp; &nbsp;'msg' =&gt; "您好，您的验证码：8888【示远科技】",&nbsp; //必填参数。短信内容(内容后面必须要带上签名如:[示远科技])<br>
+&nbsp;&nbsp; &nbsp;'needstatus' =&gt; "true", //true，需要状态报告；false不需要状态报告<br>
+&nbsp;&nbsp; &nbsp;'product' =&gt; //可选参数。产品id<br>
+);<br>
+//20161121153110,0&nbsp; 响应时间 与 响应状态(详细响应状态返回值请看接口文档)<br>
+//1001121153110751500 返回的msgid<br>
+$content = sendPost($sendUrl,$smsConf,1); //请求发送短信<br>
+echo $content;<br>
+/**<br>
+&nbsp;* 请求接口返回内容<br>
+&nbsp;* @param&nbsp; string $url [请求的URL地址]<br>
+&nbsp;* @param&nbsp; string $params [请求的参数]<br>
+&nbsp;* @param&nbsp; int $ipost [是否采用POST形式]<br>
+&nbsp;* @return&nbsp; string<br>
+&nbsp;*/<br>
+function sendPost($url,$params=false,$ispost=0){<br>
+&nbsp;&nbsp;&nbsp; $httpInfo = array();<br>
+&nbsp;&nbsp;&nbsp; $ch = curl_init();curl_setopt( $ch, CURLOPT_HTTP_VERSION , CURL_HTTP_VERSION_1_1 );<br>
+&nbsp;&nbsp;&nbsp; curl_setopt( $ch, CURLOPT_USERAGENT , 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22' );<br>
+&nbsp;&nbsp;&nbsp; curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT , 30 );<br>
+&nbsp;&nbsp;&nbsp; curl_setopt( $ch, CURLOPT_TIMEOUT , 30);<br>
+&nbsp;&nbsp;&nbsp; curl_setopt( $ch, CURLOPT_RETURNTRANSFER , true );<br>
+&nbsp;&nbsp;&nbsp; if( $ispost )<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl_setopt( $ch , CURLOPT_POST , true );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl_setopt( $ch , CURLOPT_POSTFIELDS , http_build_query($params));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl_setopt( $ch , CURLOPT_URL , $url );<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; else<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if($params){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl_setopt( $ch , CURLOPT_URL , $url.'?'.$params );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }else{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curl_setopt( $ch , CURLOPT_URL , $url);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; $response = curl_exec( $ch );<br>
+&nbsp;&nbsp;&nbsp; if ($response === FALSE) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //echo "cURL Error: " . curl_error($ch);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; $httpCode = curl_getinfo( $ch , CURLINFO_HTTP_CODE );<br>
+&nbsp;&nbsp;&nbsp; $httpInfo = array_merge( $httpInfo , curl_getinfo( $ch ) );<br>
+&nbsp;&nbsp;&nbsp; curl_close( $ch );<br>
+&nbsp;&nbsp;&nbsp; return $response;<br>
+}<br>
+?&gt;</div>
+ </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div class="content register_box">
+        <div>
+            <h3>覆盖三网 到达率高 真正高质的短信服务</h3>
+            <a href="javascript:;">立即注册</a>
+        </div>
+    </div>
+    <div class="content footer">
+        <div class="info_box">
+            <div class="friendlink fl">
+                <h5>友情链接</h5>
+                <ul>
+                    <li><a href="https://www.douban.com/" target="_blank">豆瓣</a> <a href="https://weibo.com/"target="_blank">新浪微博</a></li>
+                    <li><a href="http://www.163.com/" target="_blank">网易</a> <a href="http://t.qq.com/" target="_blank">腾讯微博</a></li>
+                    <li><a href="javascript:;" target="_blank">巴卡</a> <a href="http://bbs.tianya.cn/" target="_blank">天涯论坛</a></li>
+                </ul>
+            </div>
+            <div class="c_service fl">
+                <h5>客户服务</h5>
+                <ul>
+                    <li>售前：010 - 57200663</li>
+                    <li>售后：010 - 58414996</li>
+                    <li>QQ：2857964997</li>
+                </ul>
+            </div>
+            <div class="about_us fl">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="javascript:;">公司简介</a></li>
+                    <li><a href="javascript:;">服务条款</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="QR_code fr">
+                <h5>关注我们</h5>
+                <img src="images/index/QRCode1.png" alt="">
+                <img src="images/index/QRCode2.png" alt="">
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p><span>2012 - 2014 jxt10690.com, All Rights Reserved.即信通 版权所有</span> <br><span>京ICP备03519896</span></p>
+        </div>
+    </div>
+</div>
+<script src="js/lib/jquery-1.10.1/jquery-1.10.1.min.js"></script>
+<script src="js/lib/swiper/js/swiper.jquery.js"></script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            var scroH = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            var navLeft = $(".deveList").offset().left;
+            if (scroH > 484) {
+                $(".deveList").addClass("deveListFixed");
+                $(".deveList").css("left", navLeft);
+                console.log('gundong')
+            } else {
+                $(".deveList").removeClass("deveListFixed");
+                $(".deveList").css("left", "0");
+            }
+        });
+        /*顶部导航字体颜色背景色控制*/
+        $(".nav").addClass("navWhite");
+        $(".deveSelect").eq(3).addClass("cur");
+        $(".deveSelect").click(function () {
+            var index = $(".deveSelect").index(this);
+            $(".deveSelect").removeClass("cur").eq(index).addClass("cur");
+            $(".selectLink").css({ "display": "none" }).eq(index).css({ "display": "block" });
+        })
+        var urlstr = location.href;
+        if (urlstr.indexOf("dev_overview") > -1) {
+            $(".deveSelect").eq(0).addClass("cur");
+            $(".selectLink").eq(0).css({ "display": "block" });
+            $(".selectLink").eq(0).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        }else if(urlstr.indexOf("dev_newbe") > -1){
+            $(".deveSelect").eq(0).addClass("cur");
+            $(".selectLink").eq(0).css({ "display": "block" });
+            $(".selectLink").eq(0).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+        }else if (urlstr.indexOf("api_overview") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(1).addClass("cur");
+            $(".selectLink").eq(1).css({ "display": "block" });
+            $(".selectLink").eq(1).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        } else if (urlstr.indexOf("api_return") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(1).addClass("cur");
+            $(".selectLink").eq(1).css({ "display": "block" });
+            $(".selectLink").eq(1).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+        }else if (urlstr.indexOf("FAQ") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(2).addClass("cur");
+            $(".selectLink").eq(2).css({ "display": "block" });
+        } else if (urlstr.indexOf("Download") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(3).addClass("cur");
+            $(".selectLink").eq(3).css({ "display": "block" });
+        } else if (urlstr.indexOf("api_Code")>-1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(3).addClass("cur");
+            $(".selectLink").eq(3).css({ "display": "block" });
+            if (urlstr.indexOf("ASP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("CSHARP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("JAVA") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(3)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("PYTHON") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(4)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("PHP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(5)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("VBNET") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(6)").css({ "color": "#2e3ac4" });
+            }
+
+        }
+        $(".selectLink").eq(2).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        $(".selectLink").eq(2).find("a").click(function () {
+            var i = $(this).index();
+            $(".selectLink").eq(2).find("a").css({ "color": "#666666" });
+            $(this).css({ "color": "#2e3ac4" });
+        })
+
+        //    banner图片
+        var oBox = document.getElementById('doc-img');
+        var aLayer = oBox.children[0].children;
+        var cX = oBox.offsetWidth / 2;
+        var cY = oBox.offsetHeight / 2;
+        var timer = null;
+        oBox.onmouseover = function() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                oBox.style.transition = oBox.children[0].style.transition = "0s";
+            }, 500);
+        };
+
+        oBox.onmousemove = function(ev) {
+
+            var x = (ev.offsetY - cY) / 15;
+            var y = (ev.offsetX - cX) / 20;
+
+            oBox.style.transform = "rotateX(" + -x + "deg) rotateY(" + y + "deg)";
+            aLayer[0].style.transform = "translate3d(" + -y + "px," + -x / 5 + "px,0px)";
+            aLayer[1].style.transform = "translate3d(" + y + "px," + x / 5 + "px,0px)";
+
+        };
+
+        oBox.onmouseout = function() {
+            oBox.style.transition = oBox.children[0].style.transition = ".3s";
+            oBox.style.transform = "rotateX(0deg) rotateY(0deg)";
+            aLayer[0].style.transform = "translate3d(0px,0px,0px)";
+            aLayer[1].style.transform = "translate3d(0px,0px,0px)";
+        };
+
+    })
+</script>
+</body>
+</html>

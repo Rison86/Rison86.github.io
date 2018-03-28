@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>文档概述_短信验证码api介绍_短信通知api_短信营销api介绍</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/common/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html,body{
+            font-family: "微软雅黑",'Microsoft YaHei';
+        }
+    </style>
+</head>
+<body>
+<div class="ui-page">
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" class="logo fl"><img src="images/logo.png" alt="logo">合通启通信</a>
+            <ul class="nav_l fl">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li>
+                    <a href="javascript:;">产品</a><i></i>
+                    <div class="secnav productnav">
+                        <div>
+                            <a href="sms.html">
+                                <img src="images/public/sms.png" alt="短信验证码">
+                                <p>短信验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="voice.html">
+                                <img src="images/public/voice.png" alt="语音验证码">
+                                <p>语音验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mobiltraffic.html">
+                                <img src="images/public/traffic.png" alt="手机流量">
+                                <p>手机流量</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li>
+                    <a href="javascript:;">我的</a><i></i>
+                    <div class="secnav mynav">
+                        <div><a href="about.html"><em class="gsjj"></em>公司简介</a></div>
+                        <div><a href="joinus.html"><em class="zprc"></em>招聘人才</a></div>
+                        <div><a href="partner.html"><em class="hhr"></em>城市合伙人</a></div>
+                    </div>
+                </li>
+                <li><a href="wedoc.html">文档</a></li>
+            </ul>
+            <ul class="nav_r fr">
+                <li><a href="register.html">注册</a></li>
+                <span>|</span>
+                <li>
+                    <a href="javascript:;">免费测试</a><i></i>
+                    <div class="secnav testnav">
+                        <div><a href="sms.html#testfree"><em class="dx"></em>短信验证码</a></div>
+                        <div><a href="voice.html#testfree"><em class="yy"></em>语音验证码</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="other-banner doc-banner">
+        <div class="banner-content">
+            <div class="fl">
+                <h3>短信</h3>
+                <p>提供专业的短信送达服务，包括验证码短信、通知短信、运营短信、语音验证码，覆盖三网，到达率高</p>
+                <a class="l-btn btn" href="javascript:;">免费体验</a>
+            </div>
+            <div id="doc-img" class="fr">
+                <div class="contain">
+                    <div class="layer_1"></div>
+                    <div class="layer_2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="deveBoxin clear">
+            <div class="deveList fl">
+                <h3>问题与文档</h3>
+                <ul>
+                    <li>
+                        <div class="deveSelect guideOpt">
+                            <i></i><a href="wedoc.html">开发指南</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="wedoc.html">新手指南</a>
+                            <a href="wedocnewbe.html">成为开发者</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect docOpt">
+                            <i></i><a href="docApi.html">API文档</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="docApi.html">文档概述</a>
+                            <a href="docApireturn.html" style="color:#2e3ac4;">返回码说明</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect faqOpt cur">
+                            <i></i><a href="docFAQ.html">常见问题</a>
+                        </div>
+                        <div class="selectLink" style="display: block;">
+                            <a href="docFAQ.html#pt" style="color:#2e3ac4;">平台类</a>
+                            <a href="docFAQ.html#dx">短信类</a>
+                            <a href="docFAQ.html#yy">语音类</a>
+                            <a href="docFAQ.html#qt">其他</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect downOpt">
+                            <i></i><a href="javascript:;">下载中心</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="apiCodeASP.html" style="color: #2e3ac4;">ASP</a>
+                            <a href="apiCodeC.html">C#</a>
+                            <a href="apiCodeJava.html">JAVA</a>
+                            <a href="apiCodePython.html">PYTHON</a>
+                            <a href="apiCodePHP.html">PHP</a>
+                            <a href="apiCodenet.html">VB.NET</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="deveDet fr">
+                <h2>常见问题</h2>
+                <div class="deveStep" id="pt">
+                    <h4>平台类</h4>
+                    <p class="question">Q：认证审核需要多长时间？</p>
+                    <p>A：通常情况下1个工作日内即可完成审核。相关审核细则详见审核规范。</p>
+                    <p class="question">Q：三证合一如何进行企业资质认证？</p>
+                    <p>A：通常情况下1个工作日内即可完成审核。相关审核细则详见审核规范。</p>
+                    <p class="question">Q：资质、签名模版、短信模板等审核不通过原因在哪里查看？</p>
+                    <p>A：进入用户中心相应的页面查看不通过原因。</p>
+                    <p class="question">Q：移动、联通、电信都能发吗？</p>
+                    <p>A：是的，三网合一5s必达。</p>
+                    <p class="question">Q：短信能测试吗？</p>
+                    <p>A：可以。免费注册提交信息后，我们销售人员会联系您，将免费测试账户给到您。</p>
+                    <p class="question">Q：如何将我的网站、app等同你们的短信接口对接？</p>
+                    <p>A：先申请验证码类短信接口的用户名、密码；</p>
+                    <p style="text-indent: 1.5em;">下载验证码类短信接口文档；</p>
+                    <p style="text-indent: 1.5em;">将接口文档、用户名、密码一起提交给贵公司的开发人员，让开发人员接入；</p>
+                    <p style="text-indent: 1.5em;">开发人员一定要仔细阅读接口文档压缩包里边的<a href="http://www.18sms.com/File/APIfile/api.docx" style="color: #000000;">《示远验证码接口文档.doc》</a></p>
+                </div>
+                <div class="deveStep fr" id="dx">
+                    <h4>短信类</h4>
+                    <p class="question">Q：短信签名规范？</p>
+                    <p>A：不能是纯数字、纯字母、数字和字母的组合，不含违禁关键词，不能有其他特殊符号。 </p>
+
+                    <p class="question">Q：短信签名报备所需材料？ </p>
+                    <p>企业营业执照、组织机构代码证、税务登记证。</p>
+
+                    <p class="question">Q：短信签名为何要审核？ </p>
+                    <p>
+                        A : 短信由短信签名和短信模板组成，为配合三大运营商的业务要求，同时也可以侧面保证品牌效应，短信在发送时，需签署已经备案的签名。<br />
+                        短信示例：【示远科技】
+                        您的验证码是{number}，请在5分钟内完成输入。如不是本人操作，请忽略！回复TD退订 短信签名为：示远科技
+                    </p>
+
+                    <p class="question">Q：企业短信的内容是否有限制？</p>
+                    <p>A：限制，内容必须合法，不能违反大陆法律。</p>
+
+                    <p class="question">Q： 短信发不出去什么原因？</p>
+                    <p>A：检查是否还有余额，内容是否合法是否包含敏感词等。</p>
+
+                    <p class="question">Q：为什么有时候收不到短信？</p>
+                    <p>A：手机欠费、停机、信号不好等终端问题会收不到，具体咨询7*24小时。</p>
+
+                    <p class="question">Q：为什么会出现在黑名单？</p>
+                    <p>A：号码之前有过投诉或者回复过退订等会进入黑名单。</p>
+
+                    <p class="question">Q：为什么收到短信乱码？</p>
+                    <p>A：接口调用出现问题，具体联系技术支撑。</p>
+
+                    <p class="question">Q：一条短信多少字符？</p>
+                    <p>A：包括签名在内70个字符，超过70字符按照67字符为一条收费，验证码内容控制在70字符内。</p>
+
+
+                    <p class="question">Q：是否支持上下行？</p>
+                    <p>A：支持上下行。</p>
+
+                    <p class="question">Q：短信到达率是多少？</p>
+                    <p>A：除开空号、停机、黑名单等问题，到达率100%。</p>
+
+                    <p class="question">Q：支持调用状态报告吗？</p>
+                    <p>A：只需做一个完整的可接收的url地址然后我们把发送状态推送过去。</p>
+
+                    <p class="question">Q：有没有发送限制？</p>
+                    <p>A：同一号码半个小时不超过2条。</p>
+
+                    <p class="question">Q：短信使用时间有期限吗？</p>
+                    <p>A：没有期限。长期有效。</p>
+
+                    <p class="question">Q：我的短信接口可以绑定ip吗？</p>
+                    <p>A：可以。一旦绑定了ip，我们平台只发送从您绑定的ip发送过来的短信请求。</p>
+                </div>
+                <div class="deveStep fr" id="yy">
+                    <h4>语音类</h4>
+                    <p class="question">Q: 什么是语音验证码？ </p>
+                    <p>A : 语音验证码是通过电话直接呼到用户手机，将验证码内容播报给用户收听，解决短信被拦截、下发不及时的问题，结合短信使用能给用户带来更好的使用体验、减少用户流失。 </p>
+
+                    <p class="question">Q: 语音模板是否支持自定义文本转语音功能？ </p>
+                    <p>A : 支持，且支持内容中包含变量，变量请使用{标识} 例如：您的验证码为{变量}。其中，{变量}为需要接口替换的内容。 </p>
+
+                    <p class="question">Q: 语音模板审核时间是多长？</p>
+                    <p>A :语音模板审核为1个工作日。</p>
+
+                    <p class="question">Q: 语音通知，如果用户挂线，会不会重拨？ </p>
+                    <p>A : 不会重拔。 </p>
+
+                    <p class="question">Q: 语音验证码，如果用户接电话后一直不挂，持续多久会停止播报？ </p>
+                    <p>A : 系统播报3遍，3遍结束后，会自动停止挂机。 </p>
+
+
+                    <p class="question">Q：电话打不通的空号的返回值和计费？</p>
+                    <p>A：返回值是跟提交成功值一样的，计费都是一样的，都是直接提交到网关的。</p>
+                </div>
+
+                <div class="deveStep fr" id="qt">
+                    <h4>其他</h4>
+                    <p class="question">Q：短信有发送时间段限制吗？</p>
+                    <p>A：没有限制。</p>
+                    <p class="question">Q：状态成功，但是手机接收不到，那可能是手机终端问题了。</p>
+                    <p>A：建议您查看下手机目前接收状态是不是正常；长时间不关机，需要关机重启；是不是双卡双待的手机，把两张卡换一下；检查收件箱是否已满，删除一些短信。</p>
+                    <p class="question">Q：必须加上动态图形验证码？</p>
+                    <p>A：是的，为了防止短信轰炸机等的劫持，短信获取页面需加上动态图形验证码或者滑块验证。</p>
+                    <p class="question">Q：签名能自定义位置吗？</p>
+                    <p>A：不能，签名统一后置。</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div class="content register_box">
+        <div>
+            <h3>覆盖三网 到达率高 真正高质的短信服务</h3>
+            <a href="javascript:;">立即注册</a>
+        </div>
+    </div>
+    <div class="content footer">
+        <div class="info_box">
+            <div class="friendlink fl">
+                <h5>友情链接</h5>
+                <ul>
+                    <li><a href="https://www.douban.com/" target="_blank">豆瓣</a> <a href="https://weibo.com/"target="_blank">新浪微博</a></li>
+                    <li><a href="http://www.163.com/" target="_blank">网易</a> <a href="http://t.qq.com/" target="_blank">腾讯微博</a></li>
+                    <li><a href="javascript:;" target="_blank">巴卡</a> <a href="http://bbs.tianya.cn/" target="_blank">天涯论坛</a></li>
+                </ul>
+            </div>
+            <div class="c_service fl">
+                <h5>客户服务</h5>
+                <ul>
+                    <li>售前：010 - 57200663</li>
+                    <li>售后：010 - 58414996</li>
+                    <li>QQ：2857964997</li>
+                </ul>
+            </div>
+            <div class="about_us fl">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="javascript:;">公司简介</a></li>
+                    <li><a href="javascript:;">服务条款</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="QR_code fr">
+                <h5>关注我们</h5>
+                <img src="images/index/QRCode1.png" alt="">
+                <img src="images/index/QRCode2.png" alt="">
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p><span>2012 - 2014 jxt10690.com, All Rights Reserved.即信通 版权所有</span> <br><span>京ICP备03519896</span></p>
+        </div>
+    </div>
+</div>
+<script src="js/lib/jquery-1.10.1/jquery-1.10.1.min.js"></script>
+<script src="js/lib/swiper/js/swiper.jquery.js"></script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            var scroH = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            var navLeft = $(".deveList").offset().left;
+            if (scroH > 484) {
+                $(".deveList").addClass("deveListFixed");
+                $(".deveList").css("left", navLeft);
+                console.log('gundong')
+            } else {
+                $(".deveList").removeClass("deveListFixed");
+                $(".deveList").css("left", "0");
+            }
+        });
+        /*顶部导航字体颜色背景色控制*/
+        $(".nav").addClass("navWhite");
+        $(".deveSelect").eq(1).addClass("cur");
+        $(".deveSelect").click(function () {
+            var index = $(".deveSelect").index(this);
+            $(".deveSelect").removeClass("cur").eq(index).addClass("cur");
+            $(".selectLink").css({ "display": "none" }).eq(index).css({ "display": "block" });
+        })
+        var urlstr = location.href;
+        if (urlstr.indexOf("dev_overview") > -1) {
+            $(".deveSelect").eq(0).addClass("cur");
+            $(".selectLink").eq(0).css({ "display": "block" });
+            $(".selectLink").eq(0).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        }else if(urlstr.indexOf("dev_newbe") > -1){
+            $(".deveSelect").eq(0).addClass("cur");
+            $(".selectLink").eq(0).css({ "display": "block" });
+            $(".selectLink").eq(0).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+        }else if (urlstr.indexOf("api_overview") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(1).addClass("cur");
+            $(".selectLink").eq(1).css({ "display": "block" });
+            $(".selectLink").eq(1).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        } else if (urlstr.indexOf("api_return") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(1).addClass("cur");
+            $(".selectLink").eq(1).css({ "display": "block" });
+            $(".selectLink").eq(1).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+        }else if (urlstr.indexOf("FAQ") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(2).addClass("cur");
+            $(".selectLink").eq(2).css({ "display": "block" });
+        } else if (urlstr.indexOf("Download") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(3).addClass("cur");
+            $(".selectLink").eq(3).css({ "display": "block" });
+        } else if (urlstr.indexOf("api_Code")>-1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(3).addClass("cur");
+            $(".selectLink").eq(3).css({ "display": "block" });
+            if (urlstr.indexOf("ASP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("CSHARP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("JAVA") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(3)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("PYTHON") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(4)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("PHP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(5)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("VBNET") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(6)").css({ "color": "#2e3ac4" });
+            }
+
+        }
+        $(".selectLink").eq(2).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        $(".selectLink").eq(2).find("a").click(function () {
+            var i = $(this).index();
+            $(".selectLink").eq(2).find("a").css({ "color": "#666666" });
+            $(this).css({ "color": "#2e3ac4" });
+        })
+
+        //    banner图片
+        var oBox = document.getElementById('doc-img');
+        var aLayer = oBox.children[0].children;
+        var cX = oBox.offsetWidth / 2;
+        var cY = oBox.offsetHeight / 2;
+        var timer = null;
+        oBox.onmouseover = function() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                oBox.style.transition = oBox.children[0].style.transition = "0s";
+            }, 500);
+        };
+
+        oBox.onmousemove = function(ev) {
+
+            var x = (ev.offsetY - cY) / 15;
+            var y = (ev.offsetX - cX) / 20;
+
+            oBox.style.transform = "rotateX(" + -x + "deg) rotateY(" + y + "deg)";
+            aLayer[0].style.transform = "translate3d(" + -y + "px," + -x / 5 + "px,0px)";
+            aLayer[1].style.transform = "translate3d(" + y + "px," + x / 5 + "px,0px)";
+
+        };
+
+        oBox.onmouseout = function() {
+            oBox.style.transition = oBox.children[0].style.transition = ".3s";
+            oBox.style.transform = "rotateX(0deg) rotateY(0deg)";
+            aLayer[0].style.transform = "translate3d(0px,0px,0px)";
+            aLayer[1].style.transform = "translate3d(0px,0px,0px)";
+        };
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>文档概述_短信验证码api介绍_短信通知api_短信营销api介绍</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/common/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html,body{
+            font-family: "微软雅黑",'Microsoft YaHei';
+        }
+    </style>
+</head>
+<body>
+<div class="ui-page">
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" class="logo fl"><img src="images/logo.png" alt="logo">合通启通信</a>
+            <ul class="nav_l fl">
+                <li><a href="index.html">首页</a></li>
+                <li>
+                    <a href="javascript:;">产品</a><i></i>
+                    <div class="secnav productnav">
+                        <div>
+                            <a href="sms.html">
+                                <img src="images/public/sms.png" alt="短信验证码">
+                                <p>短信验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="voice.html">
+                                <img src="images/public/voice.png" alt="语音验证码">
+                                <p>语音验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mobiltraffic.html">
+                                <img src="images/public/traffic.png" alt="手机流量">
+                                <p>手机流量</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li>
+                    <a href="javascript:;">我的</a><i></i>
+                    <div class="secnav mynav">
+                        <div><a href="about.html"><em class="gsjj"></em>公司简介</a></div>
+                        <div><a href="joinus.html"><em class="zprc"></em>招聘人才</a></div>
+                        <div><a href="partner.html"><em class="hhr"></em>城市合伙人</a></div>
+                    </div>
+                </li>
+                <li class="active"><a href="wedoc.html">文档</a></li>
+            </ul>
+            <ul class="nav_r fr">
+                <li><a href="register.html">注册</a></li>
+                <span>|</span>
+                <li>
+                    <a href="sms.html">免费测试</a><i></i>
+                    <div class="secnav testnav">
+                        <div><a href="sms.html#testfree"><em class="dx"></em>短信验证码</a></div>
+                        <div><a href="voice.html#testfree"><em class="yy"></em>语音验证码</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="other-banner doc-banner">
+        <div class="banner-content">
+            <div class="fl">
+                <h3>短信</h3>
+                <p>提供专业的短信送达服务，包括验证码短信、通知短信、运营短信、语音验证码，覆盖三网，到达率高</p>
+                <a class="l-btn btn" href="javascript:;">免费体验</a>
+            </div>
+            <div id="doc-img" class="fr">
+                <div class="contain">
+                    <div class="layer_1"></div>
+                    <div class="layer_2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="deveBoxin clear">
+            <div class="deveList fl">
+                <h3>问题与文档</h3>
+                <ul>
+                    <li>
+                        <div class="deveSelect guideOpt">
+                            <i></i><a href="wedoc.html">开发指南</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="wedoc.html">新手指南</a>
+                            <a href="wedocnewbe.html">成为开发者</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect docOpt cur">
+                            <i></i><a href="docApi.html">API文档</a>
+                        </div>
+                        <div class="selectLink" style="display: block;">
+                            <a href="docApi.html" style="color:#2e3ac4;">文档概述</a>
+                            <a href="docApireturn.html">返回码说明</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect faqOpt">
+                            <i></i><a href="docFAQ.html">常见问题</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="docFAQ.html#pt" style="color:#2e3ac4;">平台类</a>
+                            <a href="docFAQ.html#dx">短信类</a>
+                            <a href="docFAQ.html#yy">语音类</a>
+                            <a href="docFAQ.html#qt">其他</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="deveSelect downOpt">
+                            <i></i><a href="download.html">下载中心</a>
+                        </div>
+                        <div class="selectLink">
+                            <a href="apiCodeASP.html" style="color: #2e3ac4;">ASP</a>
+                            <a href="apiCodeC.html">C#</a>
+                            <a href="apiCodeJava.html">JAVA</a>
+                            <a href="apiCodePython.html">PYTHON</a>
+                            <a href="apiCodePHP.html">PHP</a>
+                            <a href="apiCodenet.html">VB.NET</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="deveDet fr">
+                <h2>API文档概述</h2>
+                <div class="deveStep" id="deveStep">
+                    <h5>1.调用流程</h5>
+                    <p>示远科技短信API是基于HTTP协议来调用的，以下主要是针对HTTP请求进行API调用的原理进行详细解说。</p>
+                    <p>填充参数 > 生成签名 > 拼装HTTP请求 > 发起HTTP请求 > 得到HTTP响应 > 解释json/xml结果</p>
+                    <p>调用入口</p>
+                    <!--此链接地址需要按需求修改-->
+                    <p class="bge"><span class="c-edc">http://send.18sms.com/msg/HttpBatchSendSM</span></p>
+                    <h5>公共参数</h5>
+                    <table class="table1" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th class="title1">参数类型</th>
+                            <th class="title2">属性</th>
+                            <th class="title4">类型</th>
+                            <th class="title5">约束</th>
+                            <th>说明</th>
+                            <th class="title5">举例</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="7" class="title3">请求</td>
+                            <td class="title3">account</td>
+                            <td class="title3">String</td>
+                            <td class="title3">必选</td>
+                            <td>用户账号</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="title3">pswd </td>
+                            <td class="title3">String</td>
+                            <td class="title3">必选</td>
+                            <td>用户密码</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="title3">mobile</td>
+                            <td class="title3">String</td>
+                            <td></td>
+                            <td>合法的手机号码【国际短信特别说明：
+                                <br>
+                                1.请填写完整的手机信息："国际区码+城市地区代号+手机号码" 填写国际手机号码的时候，手机号码前必须填写"00" 如：以德国手机举例：国际区码：49，地区区码：0179(没有城市区号的可忽略)，手机号码：1234567 填写的正确格式为：00491791234567）<br>
+                                2.给大陆手机号发短信，请使用普通帐号走普通接口】</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="title3">msg</td>
+                            <td class="title3">String</td>
+                            <td class="title3">必选</td>
+                            <td>短信内容，验证码和国际短信内容控制在70个字符内。使用URL方式编码为UTF-8格式。通知短信内容超过70个字符时，会被拆分成多条，然后以长短信的格式发送语音内容。您的验证码是：sy6666（验证码只支持纯数字和字母，或者数字+字母，内容最长支持6位）</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="title3">needstatus</td>
+                            <td class="title3">String</td>
+                            <td class="title3">必选</td>
+                            <td>是否需要状态报告，取值true或false，true，表明需要状态报告；false不需要状态报告</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="title3">product</td>
+                            <td class="title3">String</td>
+                            <td class="title3">可选</td>
+                            <td>用户订购的产品id，不填写（针对老用户）系统采用用户的默认产品，用户订购多个产品时必填，否则会发生计费错误。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="title3">extno</td>
+                            <td class="title3">String</td>
+                            <td class="title3">可选</td>
+                            <td>线上用户请登陆网站用户中心——&gt;服务管理找到签名对应的extno并填写。线下用户请为空。</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h5>2.短信提交响应</h5>
+                    <p>用户短信通过http请求提交到服务器后，服务器返回响应码，响应码的格式如下：</p>
+                    <p class="bge"><span>resptime,respstatus</span><br><span>msgid</span></p>
+                    <p>格式说明</p>
+                    <p>短信提交响应分为两行，第一行为响应时间和状态，第二行为服务器给出提交msgid。无论发送的号码是多少，一个发送请求只返回一个msgid，如果响应的状态不是“0”，则没有msgid即第二行数据。（每行以换行符(0x0a,即\n)分割）</p>
+                    <p>注：needstatus参数需要等于true才会返回msgid</p>
+                    <p>提交成功</p>
+                    <p class="bge">20110725160412,0 <br>1234567890100</p>
+                    <p>响应时间为20110725160412，响应状态为0，表明已成功提交到服务器，1234567890100为返回的msgid，这个供状态报告匹配时使用。</p>
+                    <p>提交失败</p>
+                    <p class="bge"><span>20110725160412,</span><br><span class="c-edc">101</span></p>
+                    <p>本示例表明用户提交失败，返回错误码为101，服务器端并未返回msgid</p>
+                    <h5>3.注意事项</h5>
+                    <p>用户发短信必须提前报备短信内容，如果发送未报备的内容会进入审核平台，则客户的短信必须经过管理人员的审核，审核通过后才能被提交到行业网关进行短信实际发送。</p>
+                    <p>用户群发短信必须满足手机号码最低个数的限制，低于系统设定的群发最小手机号码数，则该提交请求会被拒绝，响应码为108。</p>
+                    <p> 语音验证码：</p>
+                    <p>1.手机号（mobile参数）目前只支持大陆合法手机号码(注：目前不支持17、14、184号段)。</p>
+                    <p>2.语音目前只支持验证码内容，播报内容：您的验证码是1234 播报三次。</p>
+                    <h5>4.调用示例</h5>
+                    <p class="bge"><span class="c-edc">http://send.18sms.com/msg/HttpBatchSendSM</span><br><span>?account=test01&pswd=123456&mobile=18900000000&msg=您好，您的验证码：1234&needstatus=true&product=</span></p>
+                    <p>注：product产品id默认为空</p>
+                    <h5>5.额度查询接口</h5>
+                    <p>接口地址</p>
+                    <p class="bge"><span class="c-edc">http://send.18sms.com/msg/QueryBalance</span></p>
+                    <p>参数定义</p>
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <th>序号
+                            </th>
+                            <th>参数
+                            </th>
+                            <th>说明
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="title3">1
+                            </td>
+                            <td class="title3">account
+                            </td>
+                            <td class="title3">必填参数。用户账号
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title3">2
+                            </td>
+                            <td class="title3">pswd
+                            </td>
+                            <td class="title3">必填参数。用户密码
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>提交响应</p>
+                    <p class="bge"><span>20130303180000,0</span><br><span>1234567,1000</span><br><span>1234531,2000</span></p>
+                    <p>第一行显示返回额度时的时间，提交响应值。</p>
+                    <p>第二行开始，每一行显示一个产品ID及其额度，有多少个产品显示多少行。</p>
+                    <p>提交响应值</p>
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <th>代码
+                            </th>
+                            <th>说明
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="title3">0
+                            </td>
+                            <td class="title3">成功
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title3">101
+                            </td>
+                            <td class="title3">无此用户
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title3">102
+                            </td>
+                            <td class="title3">密码错
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title3">103
+                            </td>
+                            <td class="title3">查询过快（建议每10秒查询一次）
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>示例</p>
+                    <p class="bge"><span class="c-edc">http://send.18sms.com/msg/QueryBalance</span><br><span>?account=111111&pswd=123456</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div class="content register_box">
+        <div>
+            <h3>覆盖三网 到达率高 真正高质的短信服务</h3>
+            <a href="javascript:;">立即注册</a>
+        </div>
+    </div>
+    <div class="content footer">
+        <div class="info_box">
+            <div class="friendlink fl">
+                <h5>友情链接</h5>
+                <ul>
+                    <li><a href="https://www.douban.com/" target="_blank">豆瓣</a> <a href="https://weibo.com/"target="_blank">新浪微博</a></li>
+                    <li><a href="http://www.163.com/" target="_blank">网易</a> <a href="http://t.qq.com/" target="_blank">腾讯微博</a></li>
+                    <li><a href="javascript:;" target="_blank">巴卡</a> <a href="http://bbs.tianya.cn/" target="_blank">天涯论坛</a></li>
+                </ul>
+            </div>
+            <div class="c_service fl">
+                <h5>客户服务</h5>
+                <ul>
+                    <li>售前：010 - 57200663</li>
+                    <li>售后：010 - 58414996</li>
+                    <li>QQ：2857964997</li>
+                </ul>
+            </div>
+            <div class="about_us fl">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="javascript:;">公司简介</a></li>
+                    <li><a href="javascript:;">服务条款</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="QR_code fr">
+                <h5>关注我们</h5>
+                <img src="images/index/QRCode1.png" alt="">
+                <img src="images/index/QRCode2.png" alt="">
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p><span>2012 - 2014 jxt10690.com, All Rights Reserved.即信通 版权所有</span> <br><span>京ICP备03519896</span></p>
+        </div>
+    </div>
+</div>
+<script src="js/lib/jquery-1.10.1/jquery-1.10.1.min.js"></script>
+<script src="js/lib/swiper/js/swiper.jquery.js"></script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            var scroH = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            var navLeft = $(".deveList").offset().left;
+            if (scroH > 484) {
+                $(".deveList").addClass("deveListFixed");
+                $(".deveList").css("left", navLeft);
+                console.log('gundong')
+            } else {
+                $(".deveList").removeClass("deveListFixed");
+                $(".deveList").css("left", "0");
+            }
+        });
+        /*顶部导航字体颜色背景色控制*/
+        $(".nav").addClass("navWhite");
+        $(".deveSelect").eq(1).addClass("cur");
+        $(".deveSelect").click(function () {
+            var index = $(".deveSelect").index(this);
+            $(".deveSelect").removeClass("cur").eq(index).addClass("cur");
+            $(".selectLink").css({ "display": "none" }).eq(index).css({ "display": "block" });
+        })
+        var urlstr = location.href;
+        if (urlstr.indexOf("dev_overview") > -1) {
+            $(".deveSelect").eq(0).addClass("cur");
+            $(".selectLink").eq(0).css({ "display": "block" });
+            $(".selectLink").eq(0).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        }else if(urlstr.indexOf("dev_newbe") > -1){
+            $(".deveSelect").eq(0).addClass("cur");
+            $(".selectLink").eq(0).css({ "display": "block" });
+            $(".selectLink").eq(0).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+        }else if (urlstr.indexOf("api_overview") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(1).addClass("cur");
+            $(".selectLink").eq(1).css({ "display": "block" });
+            $(".selectLink").eq(1).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        } else if (urlstr.indexOf("api_return") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(1).addClass("cur");
+            $(".selectLink").eq(1).css({ "display": "block" });
+            $(".selectLink").eq(1).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+        }else if (urlstr.indexOf("FAQ") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(2).addClass("cur");
+            $(".selectLink").eq(2).css({ "display": "block" });
+        } else if (urlstr.indexOf("Download") > -1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(3).addClass("cur");
+            $(".selectLink").eq(3).css({ "display": "block" });
+        } else if (urlstr.indexOf("api_Code")>-1) {
+            $(".deveSelect").removeClass("cur")
+            $(".deveSelect").eq(3).addClass("cur");
+            $(".selectLink").eq(3).css({ "display": "block" });
+            if (urlstr.indexOf("ASP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("CSHARP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(2)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("JAVA") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(3)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("PYTHON") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(4)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("PHP") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(5)").css({ "color": "#2e3ac4" });
+            } else if (urlstr.indexOf("VBNET") > -1) {
+                $(".selectLink").eq(3).find("a:nth-child(6)").css({ "color": "#2e3ac4" });
+            }
+
+        }
+        $(".selectLink").eq(2).find("a:nth-child(1)").css({ "color": "#2e3ac4" });
+        $(".selectLink").eq(2).find("a").click(function () {
+            var i = $(this).index();
+            $(".selectLink").eq(2).find("a").css({ "color": "#666666" });
+            $(this).css({ "color": "#2e3ac4" });
+        })
+
+        //    banner图片
+        var oBox = document.getElementById('doc-img');
+        var aLayer = oBox.children[0].children;
+        var cX = oBox.offsetWidth / 2;
+        var cY = oBox.offsetHeight / 2;
+        var timer = null;
+        oBox.onmouseover = function() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                oBox.style.transition = oBox.children[0].style.transition = "0s";
+            }, 500);
+        };
+
+        oBox.onmousemove = function(ev) {
+
+            var x = (ev.offsetY - cY) / 15;
+            var y = (ev.offsetX - cX) / 20;
+
+            oBox.style.transform = "rotateX(" + -x + "deg) rotateY(" + y + "deg)";
+            aLayer[0].style.transform = "translate3d(" + -y + "px," + -x / 5 + "px,0px)";
+            aLayer[1].style.transform = "translate3d(" + y + "px," + x / 5 + "px,0px)";
+
+        };
+
+        oBox.onmouseout = function() {
+            oBox.style.transition = oBox.children[0].style.transition = ".3s";
+            oBox.style.transform = "rotateX(0deg) rotateY(0deg)";
+            aLayer[0].style.transform = "translate3d(0px,0px,0px)";
+            aLayer[1].style.transform = "translate3d(0px,0px,0px)";
+        };
+
+    })
+</script>
+</body>
+</html>

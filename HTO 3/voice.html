@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>合通启通信</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/common/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html,body{
+            font-family: "微软雅黑",'Microsoft YaHei';
+        }
+    </style>
+</head>
+<body>
+<div class="ui-page">
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" class="logo fl"><img src="images/logo.png" alt="logo">合通启通信</a>
+            <ul class="nav_l fl">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li>
+                    <a href="javascript:;">产品</a><i></i>
+                    <div class="secnav productnav">
+                        <div>
+                            <a href="sms.html">
+                                <img src="images/public/sms.png" alt="短信验证码">
+                                <p>短信验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="voice.html">
+                                <img src="images/public/voice.png" alt="语音验证码">
+                                <p>语音验证码</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mobiltraffic.html">
+                                <img src="images/public/traffic.png" alt="手机流量">
+                                <p>手机流量</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li>
+                    <a href="javascript:;">我的</a><i></i>
+                    <div class="secnav mynav">
+                        <div><a href="about.html"><em class="gsjj"></em>公司简介</a></div>
+                        <div><a href="joinus.html"><em class="zprc"></em>招聘人才</a></div>
+                        <div><a href="partner.html"><em class="hhr"></em>城市合伙人</a></div>
+                    </div>
+                </li>
+                <li><a href="wedoc.html">文档</a></li>
+            </ul>
+            <ul class="nav_r fr">
+                <li><a href="register.html">注册</a></li>
+                <span>|</span>
+                <li>
+                    <a href="javascript:;">免费测试</a><i></i>
+                    <div class="secnav testnav">
+                        <div><a href="sms.html#testfree"><em class="dx"></em>短信验证码</a></div>
+                        <div><a href="voice.html#testfree"><em class="yy"></em>语音验证码</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="other-banner doc-banner">
+        <div class="banner-content">
+            <div class="fl">
+                <h3>语音验证码</h3>
+                <p>语音呼叫，隐私得到了高强度的保护，防止信息的泄露</p>
+                <a class="l-btn btn" href="javascript:;">免费体验</a>
+            </div>
+            <div id="voice-img" class="fr">
+                <div class="contain">
+                    <div class="layer_1"></div>
+                    <div class="layer_2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div class="content voice-code">
+        <div>
+            <div class="voiceL fl">
+                <img src="images/voice/voicecode.png" alt="">
+                <div class="fr">
+                    <h3>语音验证码</h3>
+                    <p>从公司注册开始一站式创业服务包，祝您轻松开启创业之旅。</p>
+                </div>
+            </div>
+            <div class="voiceR fr">
+                <img src="images/voice/voiceinfo.png" alt="">
+                <div class="fr">
+                    <h3>语音验证码</h3>
+                    <p>从公司注册开始一站式创业服务包，祝您轻松开启创业之旅。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content free-test" id="testfree">
+        <div>
+            <div class="free-form fl">
+                <h2>免费测试</h2>
+                <p>你最美的阳光，给予我温暖和力量</p>
+                <ul>
+                    <li><input name="phone" type="text" placeholder="请发送手机号"></li>
+                    <li><input name="code" type="text" placeholder="请输入图文验证码" style="width: 160px;"><span class="imgCode noselect" id="checkCode"></span></li>
+                    <li><a id="smsBtn" class="sms-btn" href="javascript:;">发送短信</a></li>
+                </ul>
+            </div>
+            <div class="person fr"><img src="images/voice/hand.png" alt=""></div>
+        </div>
+    </div>
+    <div class="content introduce">
+        <div>
+            <div class="pie"></div>
+            <div class="circle circle1"><img src="images/voice/iconBank.png" alt=""><p>银行金融</p></div>
+            <div class="circle circle2"><img src="images/voice/iconBank.png" alt=""><p>银行金融</p></div>
+            <div class="circle circle3"><img src="images/voice/iconBank.png" alt=""><p>银行金融</p></div>
+            <div class="circle circle4"><img src="images/voice/iconBank.png" alt=""><p>银行金融</p></div>
+        </div>
+    </div>
+    <div class="content zhanshi">
+        <div>
+            <div class="btnBox"><a href="javascript:;">语音验证码</a><a href="javascript:;">语音通知</a></div>
+            <div id="zsSwiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/voice/yytz-01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/voice/yytz-02.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/voice/yytz-03.jpg" alt=""></div>
+                    </div>
+                    <span class="swiper-button-prev"> &lt; </span>
+                    <span class="swiper-button-next"> &gt; </span>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="price content">
+        <div>
+            <div class="priceL">
+                <div>
+                    <span class="icon"></span>
+                    <div>
+                        <h6>语音验证码</h6>
+                        <div class="progress fl">
+                            <span>金额（万）</span><input id="voicePrice" type="range">
+                            <p class="rangeNum"><span>0</span><span>0.5</span><span>1</span><span>1.5</span><span>2</span></p>
+                        </div>
+                        <div class="showprice">
+                            <span><i></i>0.042元/条</span><span><i class="tNum"></i>1027263条</span>
+                        </div>
+                    </div>
+                    <p class="priceNum"><span>8500</span>元</p>
+                </div>
+                <div>
+                    <span class="icon iconB"></span>
+                    <div>
+                        <h6>通知信息</h6>
+                        <div class="progress fl">
+                            <span>金额（万）</span><input id="infoPrice" type="range">
+                            <p class="rangeNum"><span>0</span><span>0.5</span><span>1</span><span>1.5</span><span>2</span></p>
+                        </div>
+                        <div class="showprice">
+                            <span><i></i>0.042元/条</span><span><i class="tNum"></i>1027263条</span>
+                        </div>
+                    </div>
+                    <p class="priceNum"><span>0</span>元</p>
+                </div>
+            </div>
+            <div class="priceR">
+                <h3>价格估计</h3>
+                <div class="totle">
+                    <p>合计金额</p>
+                    <span id="totlePrice">10000</span>元
+                </div>
+                <h6>价格明细</h6>
+                <ul>
+                    <li>
+                        <i></i>
+                        <div>
+                            <p>语音验证码</p>
+                            <p>每条0.053元，总计384975条</p>
+                        </div>
+                        <span class="fr">￥10000</span>
+                    </li>
+                    <li>
+                        <i class="icon2"></i>
+                        <div>
+                            <p>语音验证码</p>
+                            <p>每条0.053元，总计384975条</p>
+                        </div>
+                        <span class="fr">￥10000</span>
+                    </li>
+                </ul>
+                <div class="pbtnBox">
+                    <a href="javascript:;">联系客服</a><a href="javascript:;">立即购买</a>
+                </div>
+                <p class="hint">注：购买金额大于10000元时，请联系客服</p>
+            </div>
+        </div>
+    </div>
+    <div class="case content">
+        <div>
+            <h4>客户案例</h4>
+            <p>十年经验，超级口碑，值得你的信赖，我们只做最强的自己</p>
+            <div id="case-swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/voice/suning.png" alt="" class="caselogo">
+                            <h5>苏宁商城</h5>
+                            <p>以云计算和大数据为基石，整合京东集团内部生态及合作伙伴资源，汇聚包括云资源、技术和创业培训、营销推广等在内的全方位服务， 解决创业初期资金、技术、运营难题，加速成就创业梦想！</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/voice/edj.png" alt="" class="caselogo">
+                            <h5>e代驾</h5>
+                            <p>以云计算和大数据为基石，整合京东集团内部生态及合作伙伴资源，汇聚包括云资源、技术和创业培训、营销推广等在内的全方位服务， 解决创业初期资金、技术、运营难题，加速成就创业梦想！</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/voice/taobao.png" alt="" class="caselogo">
+                            <h5>淘宝商城</h5>
+                            <p>以云计算和大数据为基石，整合京东集团内部生态及合作伙伴资源，汇聚包括云资源、技术和创业培训、营销推广等在内的全方位服务， 解决创业初期资金、技术、运营难题，加速成就创业梦想！</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/voice/xdf.png" alt="" class="caselogo">
+                            <h5>新东方</h5>
+                            <p>以云计算和大数据为基石，整合京东集团内部生态及合作伙伴资源，汇聚包括云资源、技术和创业培训、营销推广等在内的全方位服务， 解决创业初期资金、技术、运营难题，加速成就创业梦想！</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/voice/pabx.png" alt="" class="caselogo">
+                            <h5>中国平安</h5>
+                            <p>以云计算和大数据为基石，整合京东集团内部生态及合作伙伴资源，汇聚包括云资源、技术和创业培训、营销推广等在内的全方位服务， 解决创业初期资金、技术、运营难题，加速成就创业梦想！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="use-process content">
+        <div>
+            <h6>使用流程</h6>
+            <ul>
+                <li><i class="uicom"></i><br><span>注册账号</span></li><p class="cutline"></p>
+                <li><i class="uicom"></i><br><span>登录平台</span></li><p class="cutline"></p>
+                <li><i class="uicom"></i><br><span>导入数据</span></li><p class="cutline"></p>
+                <li><i class="uicom"></i><br><span>批量发送</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content register_box">
+        <div>
+            <h3>覆盖三网 到达率高 真正高质的短信服务</h3>
+            <a href="register.html">立即注册</a>
+
+        </div>
+    </div>
+    <div class="content footer">
+        <div class="info_box">
+            <div class="friendlink fl">
+                <h5>友情链接</h5>
+                <ul>
+                    <li><a href="https://www.douban.com/" target="_blank">豆瓣</a> <a href="https://weibo.com/"target="_blank">新浪微博</a></li>
+                    <li><a href="http://www.163.com/" target="_blank">网易</a> <a href="http://t.qq.com/" target="_blank">腾讯微博</a></li>
+                    <li><a href="javascript:;" target="_blank">巴卡</a> <a href="http://bbs.tianya.cn/" target="_blank">天涯论坛</a></li>
+                </ul>
+            </div>
+            <div class="c_service fl">
+                <h5>客户服务</h5>
+                <ul>
+                    <li>售前：010 - 57200663</li>
+                    <li>售后：010 - 58414996</li>
+                    <li>QQ：2857964997</li>
+                </ul>
+            </div>
+            <div class="about_us fl">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="about.html">公司简介</a></li>
+                    <li><a href="javascript:;">服务条款</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="QR_code fr">
+                <h5>关注我们</h5>
+                <img src="images/index/QRCode1.png" alt="">
+                <img src="images/index/QRCode2.png" alt="">
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p><span>2012 - 2014 jxt10690.com, All Rights Reserved.即信通 版权所有</span> <br><span>京ICP备03519896</span></p>
+        </div>
+    </div>
+</div>
+<script src="js/lib/jquery-1.10.1/jquery-1.10.1.min.js"></script>
+<script src="js/lib/swiper/js/swiper.jquery.js"></script>
+<script src="js/lib/RangeSlider.js"></script>
+<script>
+    $(function () {
+        //    banner图片
+        var oBox = document.getElementById('voice-img');
+        var aLayer = oBox.children[0].children;
+        var cX = oBox.offsetWidth / 2;
+        var cY = oBox.offsetHeight / 2;
+        var timer = null;
+        oBox.onmouseover = function() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                oBox.style.transition = oBox.children[0].style.transition = "0s";
+            }, 500);
+        };
+
+        oBox.onmousemove = function(ev) {
+
+            var x = (ev.offsetY - cY) / 20;
+            var y = (ev.offsetX - cX) / 40;
+
+            oBox.style.transform = "rotateX(" + -x + "deg) rotateY(" + y + "deg)";
+            aLayer[0].style.transform = "translate3d(" + -y + "px," + -x / 5 + "px,0px)";
+            aLayer[1].style.transform = "translate3d(" + y + "px," + x / 5 + "px,0px)";
+
+        };
+
+        oBox.onmouseout = function() {
+            oBox.style.transition = oBox.children[0].style.transition = ".3s";
+            oBox.style.transform = "rotateX(0deg) rotateY(0deg)";
+            aLayer[0].style.transform = "translate3d(0px,0px,0px)";
+            aLayer[1].style.transform = "translate3d(0px,0px,0px)";
+        };
+
+        //验证码生成，制作测试用，正式需后台修改
+        var code;//全局定义验证码
+        function createCode() {
+            code='';
+            var codeLength = 4;//验证码长度
+            var checkCode = $('#checkCode');
+            var selectChar = [1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','d','h','i','j','k','l','m','n','p','q','r','s','t','u','v','w','x','y','z'];//所有候选组成验证码的字符
+            for( var i=0; i<codeLength; i++ ){
+                var charIndex = Math.floor(Math.random()*59);
+                code += selectChar[charIndex];
+            }
+            if (checkCode){
+                checkCode.addClass('code');
+                checkCode.text(code);
+                checkCode.blur();
+            }
+            $('#validCode').val('')
+        }
+        createCode();
+        $('#checkCode').click(function () {
+            createCode();
+        })
+        //
+        var repPhone=/^1[34578]\d{9}$/;//验证11位手机号码，1开头第二位必须为3/4/5/7/8
+        function validate() {
+            var phone = $.trim($('input[name="phone"]').val());
+            var code =  $.trim($('input[name="code"]').val());
+            if(phone='' || repPhone.test(phone) != true){
+                loanWarning("手机号码输入错误",$('input[name="phone"]'));
+                $('input[name="phone"]').focus();
+                return false;
+            }
+            if(code.length <= 0){
+                loanWarning("验证码不能为空",$('input[name="code"]'));
+                $('input[name="code"]').focus();
+                return false;
+            }else if(code != $('#checkCode').text()){
+                loanWarning("验证码输入有误",$('input[name="code"]'));
+                $('input[name="code"]').focus();
+                return false;
+            }else{
+                $.ajax({
+
+                });
+            }
+        }
+        function loanWarning(msg,_this) {
+            var txt = "<p class='prompt'>"+msg+"</p>";
+            _this.parents('li').append(txt);
+        }
+        $('#smsBtn').click(function () {
+            $('.prompt').remove();
+            validate();
+        })
+//        展示
+        var paginationArr = ['外卖员通知用户取餐','用户接听电话','确认送达']
+        var zsSwiper = new Swiper('#zsSwiper .swiper-container', {
+            loop:true,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            pagination : '.swiper-pagination',
+            paginationClickable :true,
+            paginationBulletRender: function (swiper, index, className) {
+                return '<span class="' + className + '">' + '<i>' + (index+1) + '</i>' + paginationArr[index] + '</span>';
+            }
+        })
+//
+        $('#voicePrice').RangeSlider({ min: 0, max: 2,  step: 0.1,  callback: ''});
+        $('#infoPrice').RangeSlider({ min: 0, max: 2,  step: 0.1,  callback: ''});
+//        客户案例轮播
+        var caseySwiper = new Swiper('#case-swiper .swiper-container', {
+            watchSlidesProgress: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            slideToClickedSlide:true,
+            loop: true,
+            loopedSlides: 3,
+            autoplay: 3000,
+            //paginationClickable :true,
+            onProgress: function(swiper, progress) {
+                for (i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides.eq(i);
+                    var slideProgress = swiper.slides[i].progress;
+                    modify = 1;
+                    if (Math.abs(slideProgress) > 1) {
+                        modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                    }
+                    translate = slideProgress * modify * (-21) + 'px';
+                    scale = 1 - Math.abs(slideProgress) / 6;
+                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                    slide.css('zIndex', zIndex);
+                    slide.css('opacity', 1);
+                    if (Math.abs(slideProgress) > 3) {
+                        slide.css('opacity', 0);
+                    }
+                }
+            },
+            onSetTransition: function(swiper, transition) {
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides.eq(i)
+                    slide.transition(transition);
+                }
+
+            }
+        });
+//    地图
+    })
+</script>
+</body>
+</html>
