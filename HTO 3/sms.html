@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit" />
+		<title>合通启通信</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="js/lib/swiper/css/swiper.min.css">
+		<link rel="stylesheet" href="css/common/base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			html,
+			body {
+				font-family: "微软雅黑", 'Microsoft YaHei';
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="ui-page">
+			<div class="header" style="position: static;">
+				<div class="nav">
+					<a href="index.html" class="logo fl"><img src="images/logo.png" alt="logo">合通启通信</a>
+					<ul class="nav_l fl">
+						<li class="active">
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">产品</a><i></i>
+							<div class="secnav productnav">
+								<div>
+									<a href="sms.html">
+										<img src="images/public/sms.png" alt="短信验证码">
+										<p>短信验证码</p>
+									</a>
+								</div>
+								<div>
+									<a href="voice.html">
+										<img src="images/public/voice.png" alt="语音验证码">
+										<p>语音验证码</p>
+									</a>
+								</div>
+								<div>
+									<a href="mobiltraffic.html">
+										<img src="images/public/traffic.png" alt="手机流量">
+										<p>手机流量</p>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;">咨询</a>
+						</li>
+						<li>
+							<a href="javascript:;">我的</a><i></i>
+							<div class="secnav mynav">
+								<div>
+									<a href="about.html"><em class="gsjj"></em>公司简介</a>
+								</div>
+								<div>
+									<a href="joinus.html"><em class="zprc"></em>招聘人才</a>
+								</div>
+								<div>
+									<a href="partner.html"><em class="hhr"></em>城市合伙人</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="wedoc.html">文档</a>
+						</li>
+					</ul>
+					<ul class="nav_r fr">
+						<li>
+							<a href="register.html">注册</a>
+						</li>
+						<span>|</span>
+						<li>
+							<a href="javascript:;">免费测试</a><i></i>
+							<div class="secnav testnav">
+								<div>
+									<a href="sms.html#testfree"><em class="dx"></em>短信验证码</a>
+								</div>
+								<div>
+									<a href="voice.html#testfree"><em class="yy"></em>语音验证码</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="other-banner doc-banner">
+				<div class="banner-content">
+					<div class="fl">
+						<h3>短信验证码 <img src="images/sms/smsicon.png" alt="" style="vertical-align: middle;"></h3>
+						<p>秒速到达、专属通道、到达率超高，为您的短信负责</p>
+						<a class="l-btn btn" href="javascript:;">立即体验</a>
+						<a class="r-btn btn" href="javascript:;">立即购买</a>
+					</div>
+					<div id="sms-img" class="fr">
+						<div class="contain">
+							<div class="layer_1"></div>
+							<div class="layer_2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subnav content" id="testfree">
+				<div>
+					<p class="all fl"><i></i>全部产品</p>
+					<ul class="subnavR fr">
+						<li class="cur">
+							<a href="javascript:;">免费测试</a>
+						</li>
+						<li>
+							<a href="javascript:;">产品优势</a>
+						</li>
+						<li>
+							<a href="javascript:;">使用场景</a>
+						</li>
+						<li>
+							<a href="javascript:;">产品价格</a>
+						</li>
+						<li>
+							<a href="javascript:;">发送数据</a>
+						</li>
+						<li>
+							<a href="javascript:;">合作客户</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--中间内容-->
+			<div class="content free-test">
+				<div>
+					<div class="free-form fl">
+						<h2>免费测试</h2>
+						<p>你最美的阳光，给予我温暖和力量</p>
+						<ul>
+							<li><input name="phone" type="text" placeholder="请发送手机号"></li>
+							<li><input name="code" type="text" placeholder="请输入图文验证码" style="width: 160px;"><span class="imgCode noselect" id="checkCode"></span></li>
+							<li>
+								<a id="smsBtn" class="sms-btn" href="javascript:;">发送短信</a>
+							</li>
+						</ul>
+					</div>
+					<div class="rocketbox fr">
+						<img src="images/sms/rocket.png" alt="" class="rocket">
+						<img src="images/sms/moonl.png" alt="" class="moonl">
+						<img src="images/sms/moon.png" alt="" class="moonr">
+						<div class="rocket-wrapper">
+
+							<div class="moveB">
+								<img src="images/sms/yellow.png" alt="" class="yellow">
+								<img src="images/sms/yellow2.png" alt="" class="yellow2">
+								<img src="images/sms/yellow3.png" alt="" class="yellow3">
+								<img src="images/sms/cloud.png" alt="" class="cloud">
+								<img src="images/sms/cloudm.png" class="cloudm" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--优势-->
+			<div class="introduction content">
+				
+				<div class="advantage-icon">
+					<ul>
+						<li class="txt-item" data-index = "0">
+							<p>快速</p>
+						</li>
+						<li class="txt-item" data-index = "1">
+							<p>稳定</p>
+						</li>
+						<li class="txt-item" data-index = "2">
+							<p>安全</p>
+						</li>
+						<li class="txt-item" data-index = "3">
+							<p>低廉</p>
+						</li>
+					</ul>
+					<img src="images/sms/fast.png"  class="img-pos"/>
+					<img src="images/sms/stable.png" class="img-pos"/>
+					<img src="images/sms/safe.png"  class="img-pos"/>
+					<img src="images/sms/cheap.png"  class="img-pos"/>
+				</div>
+				<section class="center-icon" data-index = "5">
+						<div class="circle-icon1 circle-icon"></div>
+						<div class="circle-icon2 circle-icon"></div>
+						<div class="current-icon">
+								<img src="images/sms/experience.png" />
+								<div class="advantage-title">
+									<i class="grey-line"></i>
+									<h2>经验</h2>
+									<h5>合通启通信</h5>
+								</div>
+							</div>
+
+				</section>
+				<ul class="advantage-txt">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li class="active-item">5</li>						
+				</ul>
+			</div>
+			<!--使用场景-->
+			<div class="use-scene">
+				<ul class="scene-wrapper clearfix">
+					<li>验证码短信</li>
+					<li style="margin:0 135px;">营销短信</li>
+					<li>通知短信</li>
+				</ul>
+				<ul class="use-case clearfix">
+						<li style="background-image: url(images/sms/item_bg1.png);">
+							<div>
+								<p class="case-img"><img src="images/sms/hovericon1.png" alt="" /></p>
+								<pre class="case-line"></pre>
+								<h2>电商方案</h2>
+								<p class="case-content">【合启通】您的登录密码是369587；欢迎使用优衣库祝您购物愉快。</p>
+								<button class="case-btn">立即购买</button>
+							</div>
+						</li>
+						<li style="background-image: url(images/sms/item_bg2.png);">
+							<div>
+								<p class="case-img"><img src="images/sms/hovericon2.png" alt="" /></p>
+								<pre class="case-line"></pre>
+								<h2>APP方案</h2>
+								<p class="case-content">【合启通】您的登录密码是369587；欢迎使用优衣库祝您购物愉快。</p>
+								<button class="case-btn">立即购买</button>
+							</div>
+						</li>
+						<li style="background-image: url(images/sms/item_bg3.png);">
+							<div>
+								<p class="case-img"><img src="images/sms/hovericon3.png" alt="" /></p>
+								<pre class="case-line"></pre>
+								<h2>金融方案</h2>
+								<p class="case-content">【合启通】您的登录密码是369587；欢迎使用优衣库祝您购物愉快。</p>
+								<button class="case-btn">立即购买</button>
+							</div>
+						</li>
+						<li style="background-image: url(images/sms/item_bg4.png);">
+							<div>
+								<p class="case-img"><img src="images/sms/hovericon4.png" alt="" /></p>
+								<pre class="case-line"></pre>
+								<h2>游戏方案</h2>
+								<p class="case-content">【合启通】您的登录密码是369587；欢迎使用优衣库祝您购物愉快。</p>
+								<button class="case-btn">立即购买</button>
+							</div>
+						</li>
+					
+				</ul>
+			</div>
+			<!--price-->
+		<div class="price content sms-price">
+        <div>
+            <div class="priceL">
+                <div>
+                    <span class="icon"></span>
+                    <div>
+                        <h6>验证码短信</h6>
+                        <div class="progress fl">
+                            <span>金额（万）</span><input id="voicePrice" type="range">
+                            <p class="rangeNum"><span>0</span><span>0.5</span><span>1</span><span>1.5</span><span>2</span></p>
+                        </div>
+                        <div class="showprice">
+                            <span><i></i>0.042元/条</span><span><i class="tNum"></i>1027263条</span>
+                        </div>
+                    </div>
+                    <p class="priceNum"><span>8500</span>元</p>
+                </div>
+                <div>
+                    <span class="icon iconB"></span>
+                    <div>
+                        <h6>营销短信</h6>
+                        <div class="progress fl">
+                            <span>金额（万）</span><input id="infoPrice" type="range">
+                            <p class="rangeNum"><span>0</span><span>0.5</span><span>1</span><span>1.5</span><span>2</span></p>
+                        </div>
+                        <div class="showprice">
+                            <span><i></i>0.042元/条</span><span><i class="tNum"></i>1027263条</span>
+                        </div>
+                    </div>
+                    <p class="priceNum"><span>0</span>元</p>
+                </div>
+                <div>
+                    <span class="icon"></span>
+                    <div>
+                        <h6>通知短信</h6>
+                        <div class="progress fl">
+                            <span>金额（万）</span><input id="msgPrice" type="range">
+                            <p class="rangeNum"><span>0</span><span>0.5</span><span>1</span><span>1.5</span><span>2</span></p>
+                        </div>
+                        <div class="showprice">
+                            <span><i></i>0.042元/条</span><span><i class="tNum"></i>1027263条</span>
+                        </div>
+                    </div>
+                    <p class="priceNum"><span>6000</span>元</p>
+                </div>
+            </div>
+            <div class="priceR">
+                <h3>价格估计</h3>
+                <div class="totle">
+                    <p>合计金额</p>
+                    <span id="totlePrice">10000</span>元
+                </div>
+                <h6>价格明细</h6>
+                <ul>
+                    <li>
+                        <i style="background: url(images/sms/price_iconr1.png) center center;"></i>
+                        <div>
+                            <p>短信验证码</p>
+                            <p>每条0.053元，总计384975条</p>
+                        </div>
+                        <span class="fr">￥10000</span>
+                    </li>
+                    <li>
+                        <i class="icon2" style="background: url(images/sms/price_iconr2.png) center center;"></i>
+                        <div>
+                            <p>短信验证码</p>
+                            <p>每条0.053元，总计384975条</p>
+                        </div>
+                        <span class="fr">￥10000</span>
+                    </li>
+                    <li>
+                        <i style="background: url(images/sms/price_iconr3.png) center center;"></i>
+                        <div>
+                            <p>短信验证码</p>
+                            <p>每条0.053元，总计384975条</p>
+                        </div>
+                        <span class="fr">￥10000</span>
+                    </li>
+                </ul>
+                <div class="pbtnBox">
+                    <a href="javascript:;">联系客服</a><a href="javascript:;">立即购买</a>
+                </div>
+                <p class="hint">注：购买金额大于10000元时，请联系客服</p>
+            </div>
+        </div>
+    </div>
+	<!--chart-->
+	<div class="sms-chart">
+		<div class="sms-chart-title">
+			<h2>检测数据更可靠</h2>
+			<p>今日发送量，客户数量，今日成功率全方位实时观测</p>
+		</div>
+		<ul class="sms-chart-data clearfix">
+			<li>
+				<i style="background: url(images/sms/chart_icon1.png) no-repeat center center;"></i>
+				<div>
+					<span class="counter chart-num">46489707</span>
+					<p class="chart-txt">今日发送量</p>
+				</div>
+			</li>
+			<li>
+				<i style="background: url(images/sms/chart_icon2.png) no-repeat center center;"></i>
+				<div>
+					<span class="counter chart-num">13679</span>
+					<p class="chart-txt">客户数量</p>
+				</div>
+			</li>
+			<li>
+				<i style="background: url(images/sms/chart_icon3.png) no-repeat center center;"></i>
+				<div>
+					<p class="chart-num"><span class="counter">99.9986</span><span>%</span></p>
+					<p class="chart-txt">客户数量</p>
+				</div>
+			</li>
+			<li>
+				<i style="background: url(images/sms/chart_icon4.png) no-repeat center center;"></i>
+				<div>
+					<p class="chart-num"><span class="counter">7</span>×<span class="counter">24</span></p>
+					<p class="chart-txt">客户服务</p>
+				</div>
+			</li>
+		</ul>
+	</div>		
+			<!--slide-->
+			<div class="bottom-slide">
+				<div class="slide-title">
+					<h2>使用客户</h2>
+					<p>权威认证的云计算服务，充分保障您的业务实践与业务安全</p>
+					<div class="nav-btn">
+						<p class="prev-btn"><i class="prev-hover"></i><i style="background: url(images/sms/prev.png) no-repeat center center;"></i></p>
+						<p class="next-btn"><i class="next-hover"></i><i style="background: url(images/sms/next.png) no-repeat center center;"></i></p>
+					</div>
+				</div>
+				<div class="slide-container">
+					<ul class="viewbox clearfix">
+						<li class="slide-item">
+							<img src="images/sms/logo.png" alt="" class="slide-logo" />
+							<h2>苏宁电器</h2>
+							<p>30879条</p>
+						</li>
+						<li class="slide-item">
+							<img src="images/sms/logo.png" alt="" class="slide-logo" />
+							<h2>苏宁电器</h2>
+							<p>30879条</p>
+						</li>
+						<li class="slide-item">
+							<img src="images/sms/logo.png" alt="" class="slide-logo" />
+							<h2>苏宁电器</h2>
+							<p>30879条</p>
+						</li>
+						<li class="slide-item">
+							<img src="images/sms/logo.png" alt="" class="slide-logo" />
+							<h2>苏宁电器</h2>
+							<p>30879条</p>
+						</li>
+						<li class="slide-item">
+							<img src="images/sms/logo.png" alt="" class="slide-logo" />
+							<h2>苏宁电器</h2>
+							<p>30879条</p>
+						</li>
+						<li class="slide-item">
+							<img src="images/sms/logo.png" alt="" class="slide-logo" />
+							<h2>苏宁电器</h2>
+							<p>30879条</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+			<div class="content register_box sms-bottom" style="background-image: url(images/sms/bottom_bg.png);">
+				<div>
+					<h3>免费体验 短信更Easy</h3>
+					<a href="javascript:;">立即注册</a>
+				</div>
+			</div>
+			<div class="content footer">
+				<div class="info_box">
+					<div class="friendlink fl">
+						<h5>友情链接</h5>
+						<ul>
+							<li>
+								<a href="https://www.douban.com/" target="_blank">豆瓣</a>
+								<a href="https://weibo.com/" target="_blank">新浪微博</a>
+							</li>
+							<li>
+								<a href="http://www.163.com/" target="_blank">网易</a>
+								<a href="http://t.qq.com/" target="_blank">腾讯微博</a>
+							</li>
+							<li>
+								<a href="javascript:;" target="_blank">巴卡</a>
+								<a href="http://bbs.tianya.cn/" target="_blank">天涯论坛</a>
+							</li>
+						</ul>
+					</div>
+					<div class="c_service fl">
+						<h5>客户服务</h5>
+						<ul>
+							<li>售前：010 - 57200663</li>
+							<li>售后：010 - 58414996</li>
+							<li>QQ：2857964997</li>
+						</ul>
+					</div>
+					<div class="about_us fl">
+						<h5>关于我们</h5>
+						<ul>
+							<li>
+								<a href="javascript:;">公司简介</a>
+							</li>
+							<li>
+								<a href="javascript:;">服务条款</a>
+							</li>
+							<li>
+								<a href="javascript:;">联系我们</a>
+							</li>
+						</ul>
+					</div>
+					<div class="QR_code fr">
+						<h5>关注我们</h5>
+						<img src="images/index/QRCode1.png" alt="">
+						<img src="images/index/QRCode2.png" alt="">
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<p><span>2012 - 2014 jxt10690.com, All Rights Reserved.即信通 版权所有</span> <br><span>京ICP备03519896</span></p>
+				</div>
+			</div>
+		</div>
+		<script src="js/lib/jquery-1.10.1/jquery-1.10.1.min.js"></script>
+		<script src="js/lib/swiper/js/swiper.jquery.js"></script>
+		<script src="js/lib/RangeSlider.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.countup.min.js"></script>
+		<script src="js/lib/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+				//    banner图片
+				var oBox = document.getElementById('sms-img');
+				var aLayer = oBox.children[0].children;
+				var cX = oBox.offsetWidth / 2;
+				var cY = oBox.offsetHeight / 2;
+				var timer = null;
+				oBox.onmouseover = function() {
+					clearTimeout(timer);
+					timer = setTimeout(function() {
+						oBox.style.transition = oBox.children[0].style.transition = "0s";
+					}, 500);
+				};
+
+				oBox.onmousemove = function(ev) {
+
+					var x = (ev.offsetY - cY) / 10;
+					var y = (ev.offsetX - cX) / 40;
+
+					oBox.style.transform = "rotateX(" + -x + "deg) rotateY(" + y + "deg)";
+					aLayer[0].style.transform = "translate3d(" + -y + "px," + -x / 5 + "px,0px)";
+					aLayer[1].style.transform = "translate3d(" + y + "px," + x / 5 + "px,0px)";
+
+				};
+
+				oBox.onmouseout = function() {
+					oBox.style.transition = oBox.children[0].style.transition = ".3s";
+					oBox.style.transform = "rotateX(0deg) rotateY(0deg)";
+					aLayer[0].style.transform = "translate3d(0px,0px,0px)";
+					aLayer[1].style.transform = "translate3d(0px,0px,0px)";
+				};
+
+				//验证码生成，制作测试用，正式需后台修改
+				var code; //全局定义验证码
+				function createCode() {
+					code = '';
+					var codeLength = 4; //验证码长度
+					var checkCode = $('#checkCode');
+					var selectChar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'd', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; //所有候选组成验证码的字符
+					for(var i = 0; i < codeLength; i++) {
+						var charIndex = Math.floor(Math.random() * 59);
+						code += selectChar[charIndex];
+					}
+					if(checkCode) {
+						checkCode.addClass('code');
+						checkCode.text(code);
+						checkCode.blur();
+					}
+					$('#validCode').val('')
+				}
+				createCode();
+				$('#checkCode').click(function() {
+					createCode();
+				})
+				//
+				var repPhone = /^1[34578]\d{9}$/; //验证11位手机号码，1开头第二位必须为3/4/5/7/8
+				function validate() {
+					var phone = $.trim($('input[name="phone"]').val());
+					var code = $.trim($('input[name="code"]').val());
+					if(phone = '' || repPhone.test(phone) != true) {
+						loanWarning("手机号码输入错误", $('input[name="phone"]'));
+						$('input[name="phone"]').focus();
+						return false;
+					}
+					if(code.length <= 0) {
+						loanWarning("验证码不能为空", $('input[name="code"]'));
+						$('input[name="code"]').focus();
+						return false;
+					} else if(code != $('#checkCode').text()) {
+						loanWarning("验证码输入有误", $('input[name="code"]'));
+						$('input[name="code"]').focus();
+						return false;
+					} else {
+						$.ajax({
+
+						});
+					}
+				}
+
+				function loanWarning(msg, _this) {
+					var txt = "<p class='prompt'>" + msg + "</p>";
+					_this.parents('li').append(txt);
+				}
+				$('#smsBtn').click(function() {
+					$('.prompt').remove();
+					validate();
+				})
+
+				$('#voicePrice').RangeSlider({
+					min: 0,
+					max: 2,
+					step: 0.1,
+					callback: ''
+				});
+				$('#infoPrice').RangeSlider({
+					min: 0,
+					max: 2,
+					step: 0.1,
+					callback: ''
+				});
+				$('#msgPrice').RangeSlider({
+					min: 0,
+					max: 2,
+					step: 0.1,
+					callback: ''
+				});
+				$('#smsBtn').on('mouseover', function() {
+					$('.moveB').addClass('movebAnimation');
+				}).on('mouseout', function() {
+					$('.moveB').removeClass('movebAnimation')
+				});
+				//        动画实际情况可以加载到ajax请求成功后，请求成功可加动画，请求失败不加动画，这样效果更好
+				$('#smsBtn').click(function() {
+					$('.rocket').addClass('movetAnimation');
+					setTimeout(function() {
+						$('.rocket').removeClass('movetAnimation')
+					}, 1000)
+				});
+			})
+			$(function(){
+				$(".txt-item").hover(function(){
+					var i=$(this).index()
+					$(".txt-item").eq(i).css("background-color","transparent")
+					$(".img-pos").eq(i).css({	"opacity": 1})
+					$(".txt-item").eq(i).find("p").css({"transform":"translateX(60px)"})
+				},function(){
+					var i=$(this).index()
+					$(".img-pos").eq(i).css({	"opacity": 0})
+					$(".txt-item").eq(i).css("background-color","#fff")
+					$(".txt-item").eq(i).find("p").css({"transform":"translateX(0px)"})
+				})
+				var clickable=true;
+				$(".txt-item").on("click",function(){
+					if(clickable){
+						clickable=false;
+						var i=$(this).index()
+						var $this=$(this)
+						var txt=$(this).find("p").text()
+						var src=$(".img-pos").eq(i).attr("src")
+						var  currentTxt=$(".current-icon h2").text()
+						var currentSrc=$(".current-icon>img").attr("src")
+						var  leftVal=$(".txt-item").eq(i).css("left")
+						var  topVal=$(".txt-item").eq(i).css("top")
+						var index=$(this).data("index")
+						var currentIndex=$(".center-icon").data("index")
+						$(this).data("index",currentIndex)
+						$(".center-icon").data("index",index)
+						$(".img-pos").eq(i).css({"left":555,"top":312,"transition":"all .5s"})
+						$(".advantage-title").addClass("title-animation")
+						$(".circle-icon").addClass("circle-animation")
+						$(".current-icon img").css("opacity",0)
+						$(".advantage-txt li").eq(index).addClass("active-item").siblings().removeClass("active-item")
+						setTimeout(function(){
+							$this.find("p").text(currentTxt)
+							
+							$(".img-pos").eq(i).attr("src",currentSrc)
+							$(".current-icon h2").text(txt)
+							$(".advantage-title").removeClass("title-animation")
+							$(".current-icon>img").attr("src",src)
+							$(".img-pos").eq(i).css({"left":leftVal,"top":topVal,"transition":"all 0s"})
+							$(".current-icon img").css("opacity",1)
+							clickable=true;
+						},500)
+						setTimeout(function(){
+							$(".circle-icon").removeClass("circle-animation")
+					
+						},1100)
+					}else{
+						return;
+					}
+					
+					
+					
+					
+				})
+			})
+			$(".counter").countUp({
+				time:2000
+			})
+			!function(){
+				var timer=null
+				var i=0;
+				var size=$(".viewbox li").size()
+				var move=$(".viewbox li").width()+25
+				$(".prev-btn").click(function(){
+					clearInterval(timer)
+					i--
+					if(i<=0){
+						i=size
+					}
+					$(".viewbox").css({"left":-i*move})
+					autoplay()
+				})
+				$(".next-btn").click(function(){
+					clearInterval(timer)
+					i++
+					if(i>=size){
+						i=0
+					}
+					$(".viewbox").css({"left":-i*move})
+					autoplay()
+				})
+				function autoplay(){
+					timer=setInterval(function(){
+						$(".next-btn").click()
+					},1500)
+				}
+				autoplay()
+					$(".slide-container").mouseover(function(){
+						clearInterval(timer)
+					})
+					$(".slide-container").mouseout(function(){
+						autoplay()
+					})
+			}()
+		</script>
+	</body>
+
+</html>

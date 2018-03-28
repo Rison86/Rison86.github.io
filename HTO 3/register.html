@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title>注册</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/common/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html,body{
+            width: 100%;
+            height:100%;
+        }
+        body{
+            position: relative;
+            overflow: hidden;
+            background: url("./images/register/registerBg.png") top center no-repeat;
+            -webkit-background-size:100% 100%;
+            background-size:100% 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="menu-inner">
+
+        <ul>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+        </ul>
+    </div>
+
+
+
+    <svg version="1.1" id="blob"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+    </svg>
+</div>
+<div class="reg-form-box">
+    <form class="reg-form" id="reg-form">
+        <p><span>账户设置</span> -手机号、邮箱皆可作为您的登录账号使用</p>
+        <ul class="form-list">
+            <li><span>您的姓名</span><input type="text" placeholder="请输入您的姓名"></li>
+            <li><span>手机号码</span><input type="text" name="phone" placeholder="请输入手机号码"></li>
+            <li><span>图文验证码</span><input class="ipt-code" type="text" placeholder="请输入图文验证码"><span id="img-code" class="img-code fr"></span></li>
+            <li><span></span><input type="button" style="margin-right: 18px;" value="发送短信验证码"><input type="button" value="发送语音验证码"></li>
+            <li><span>手机验证码</span><input type="text" placeholder="请输入手机验证码"></li>
+            <li>
+                <span>密码</span><input type="password" placeholder="请设置您的密码">
+                <p class="pwd_tip">6-16个字母、数字或者英文符号，区分大小写</p>
+            </li>
+            <li><span>服务条款</span><a href="javascript:;" class="clause">点击查看《巴卜云服务条款》</a></li>
+            <li><a class="reg-btn" href="javascrpt:;">同意服务条款并注册</a></li>
+        </ul>
+    </form>
+</div>
+<div class="bby-protocol-box" style="display: none;">
+    <h3>《巴卜云通讯开发平台服务协议》<span class="bbyhide">X</span></h3>
+    <div class="protocol-text">
+        <p class="pro-title"> 一、 服务条款的接受</p>
+        <p>本服务条款所称的用户是指完全同意所有条款并完成注册程序而使用”即信通”提供的服务（以下简称“本服务”）的用户。</p>
+        <p class="pro-title">二、服务条款的变更和修改</p>
+        <p> “即信通”有权随时对服务条款进行修改，并且一旦发生服务条款的变动，”即信通”将在页面上提示修改的内容；用户如果不同意服务条款的修改，可以主动取消已经获得的网络服务；如果用户继续享用网络服务，则视为用户已经接受服务条款的修改。</p>
+        <p class="pro-title">三、 用户应遵守以下法律及法规：</p>
+        <p>（1）用户同意遵守《中华人民共和国保守国家秘密法》、《中华人民共和国计算机信息系统安全保护条例》、《计算机软件保护条例》等有关计算机及互联网规定的法律和法规、实施办法。在任何情况下，”即信通”合理地认为用户的行为可能违反上述法律、法规，”即信通”可以在任何时候，不经事先通知终止向该用户提供服务。</p>
+        <p>（2）用户应了解国际互联网的无国界性，应特别注意遵守当地所有有关的法律和法规。</p>
+    </div>
+</div>
+<div class="mask"></div>
+<script src="js/lib/jquery-1.10.1/jquery-1.10.1.min.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

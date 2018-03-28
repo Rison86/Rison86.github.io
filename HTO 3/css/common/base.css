@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* reset default element */
+
+html,body{width:100%;overflow-x: hidden;}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, textarea, th{margin: 0; padding: 0;}
+body,button, input, select, textarea{font-family:"微软雅黑",'Microsoft YaHei';}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+address, cite, dfn, em, var{font-style: normal;}
+ul, ol{list-style: none;}
+a{text-decoration: none;color: #666666;}
+a:hover{text-decoration: none;}
+legend{color: #000;}
+fieldset, img{border: 0;}
+button, input, select, textarea {font-size: 100%;}
+table{border-collapse: collapse; border-spacing: 0;}
+
+body{color:#ffffff;}
+/*a, a:link { color:#336699; text-decoration: none; outline-style:none; border:none;}*/
+/*a:visited { color:#482872;}*/
+a:hover { text-decoration:none; }
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+.clear:before{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+}
+.red{color:red;}
+.bold{font-weight:bold;}
+.ta_center {text-align: center;}
+.ta_left {text-align: left;}
+.ta_right {text-align: right;}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+input[type=range] {
+    -webkit-appearance: none;/*清除系统默认样式*/
+    width: 100%;
+    background: -webkit-linear-gradient(#0066ff, #0066ff) no-repeat, transparent;/*设置左边颜色为#61bd12，右边颜色为#ddd*/
+    background-size: 0% 0%;/*设置左右宽度比例*/
+    height: 10px !important;/*横条的高度*/
+    outline: none !important;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;/*去除默认样式*/
+    cursor: default;
+    top: 0;
+    height: 26px;
+    width: 16px;
+    transform: translateY(0px);
+    /*background: none repeat scroll 0 0 #5891f5;*/
+    background: url("../../images/voice/thumb.jpg") top center no-repeat;
+    /*border-radius: 15px;*/
+    /*border: 5px solid #006eb3;*/
+    /*-webkit-box-shadow: 0 -1px 1px #fc7701 inset;*/
+}
+/*public css*/
+.header{
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    background-color: rgba(5, 2, 17, 0.76);
+    color: #ffffff;
+    z-index: 9999;
+    top:0;
+}
+.nav{
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 65px;
+    vertical-align: middle;
+}
+.nav li a{
+    color: #ffffff;
+}
+.nav .logo{
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 100px;
+}
+.logo img{
+    vertical-align: sub;
+    margin-right: 10px;
+}
+.nav ul li i{
+    display: inline-block;
+    width: 7px;
+    height: 6px;
+    /*float: left;*/
+    background: url("../../images/public/dropDown.png") top center no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: all 0.25s;
+}
+.nav ul li:hover i{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.nav_l li{
+    position: relative;
+    float: left;
+    margin-right: 60px;
+    font-size: 16px;
+}
+.nav_l .active a{
+    color: #0a6df4;
+}
+.nav_l li a:hover{
+    color: #0a6df4;
+}
+.nav_r li{
+    float: left;
+    font-size: 18px;
+}
+
+.nav_r span{
+    float: left;
+    margin: 0 20px;
+}
+
+.secnav{
+    position: absolute;
+    display: none;
+    background: #ffffff;
+    overflow: hidden;
+    font-size: 16px;
+    z-index: 99;
+}
+
+.nav .secnav a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+    color: #333333;
+}
+.nav>ul li:hover .secnav{
+    display: block;
+}
+.productnav{
+    width: 445px;
+    height: 120px;
+    left: -180px;
+}
+.productnav img{
+    margin-top: 15px;
+    /*margin-bottom: -30px;*/
+}
+.productnav p{
+    margin-top: -35px;
+}
+.productnav > div{
+    float: left;
+    text-align: center;
+    width: 147px;
+    height: 100px;
+    border-right: 1px dashed #cccccc;
+    margin-top: 10px;
+}
+.productnav > div:last-of-type{
+    border-right: none;
+}
+
+.mynav{
+    width: 134px;
+    height: 152px;
+    background: #ffffff;
+    padding: 0 15px;
+    left: -55px;
+}
+.mynav > div{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px dashed #cccccc;
+}
+.mynav em{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 14px;
+}
+.mynav em.gsjj{
+    background: url("../../images/index/gsjj.png") center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.mynav div:first-of-type:hover .gsjj{
+    background: url("../../images/index/gsjjh.png") center center no-repeat;
+}
+.mynav em.zprc{
+    background: url("../../images/index/zprc.png") center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.mynav div:nth-of-type(2):hover .zprc{
+    background: url("../../images/index/zprch.png") center center no-repeat;
+}
+.mynav em.hhr{
+    background: url("../../images/index/hhr.png") center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.mynav div:last-of-type:hover .hhr{
+    background: url("../../images/index/hhrh.png") center center no-repeat;
+}
+
+.nav_r li{
+    position: relative;
+    /*margin-right: 60px;*/
+    font-size: 16px;
+}
+.testnav{
+    width: 150px;
+    height: 101px;
+    background: #ffffff;
+    padding: 0 15px;
+    left: -55px;
+}
+.testnav > div{
+    height: 50px;
+    line-height: 50px;
+}
+.testnav > div:first-of-type{
+    border-bottom: 1px dashed #cccccc;
+}
+.testnav em{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 14px;
+}
+.testnav em.dx{
+    background: url("../../images/index/smsIcon.png") center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.testnav em.yy{
+    background: url("../../images/index/voiceIcon.png") center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.nav .testnav > div:hover a{
+    color: #0a6df4;
+}
