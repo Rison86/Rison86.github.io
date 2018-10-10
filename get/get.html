@@ -89,14 +89,14 @@
 			return parseInt(Math.random()*151+250)
 		}
 		function num(){
-			return parseInt(Math.random()*19+1)
+			return parseInt(Math.random()*9+1)
 		}
 		var num1 = num();
 		console.log(num1)
 		function createLi(a){
 			for (var i=0;i<a;i ++){
 				num1 ++;
-				if(num1>19){
+				if(num1>9){
 					num1 = 1;
 				}
 				var newLi = $("<li><img src='img/"+num1+".jpg'/><div></div></li>")
@@ -119,7 +119,7 @@
 				$("ul").eq(minIndex).append(newLi);
 			}
 		}
-		createLi(19);//创建20个li
+		createLi(9);//创建20个li
 		$("li").hover(function(){
 			$(this).children().last().toggle();
 		})
