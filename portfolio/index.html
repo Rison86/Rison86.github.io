@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio · Rison Guan</title>
+<meta name="description" content="Selected project work — Moviebook Technology.">
+<style>
+  /* ---- 配色令牌：浅色为默认，深色跟随系统 ---- */
+  :root{
+    --bg:#ffffff; --surface:#f7f7f8; --line:#e4e4e7;
+    --tx:#18181b; --dim:#71717a; --accent:#2563eb; --shadow:0 1px 3px rgba(0,0,0,.07);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0b0c0f; --surface:#16181d; --line:#26282f;
+      --tx:#e8eaed; --dim:#9096a1; --accent:#6b9bff; --shadow:0 1px 3px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b0c0f; --surface:#16181d; --line:#26282f;
+    --tx:#e8eaed; --dim:#9096a1; --accent:#6b9bff; --shadow:0 1px 3px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--tx);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* ---- 顶栏 ---- */
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:10}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:650;letter-spacing:-.01em;text-decoration:none;color:var(--tx)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .lang button{
+    border:0;background:transparent;color:var(--dim);cursor:pointer;
+    padding:5px 12px;font-size:13px;font-family:inherit;transition:.15s;
+  }
+  .lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+
+  /* ---- 页头 ---- */
+  .hero{padding:56px 0 32px}
+  .hero h1{margin:0 0 10px;font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;line-height:1.15}
+  .hero p{margin:0;color:var(--dim);max-width:60ch}
+
+  /* ---- 筛选 ---- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;padding:8px 0 28px}
+  .filters button{
+    border:1px solid var(--line);background:var(--surface);color:var(--dim);
+    padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;
+    font-family:inherit;transition:.15s;
+  }
+  .filters button[aria-pressed="true"]{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+
+  /* ---- 卡片网格 ---- */
+  .grid{
+    display:grid;gap:26px;padding-bottom:80px;
+    grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  }
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;box-shadow:var(--shadow);
+  }
+  .frame{position:relative;background:#000;aspect-ratio:16/9;cursor:pointer}
+  .frame img,.frame video{width:100%;height:100%;display:block;object-fit:contain}
+  .frame video{display:none}
+  .card.playing .frame img,.card.playing .play{display:none}
+  .card.playing .frame video{display:block}
+  .play{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(transparent 45%,rgba(0,0,0,.35));
+  }
+  .play svg{
+    width:52px;height:52px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));
+    transition:transform .15s;
+  }
+  .frame:hover .play svg{transform:scale(1.1)}
+  .dur{
+    position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.78);color:#fff;
+    font-size:11.5px;padding:2px 6px;border-radius:4px;font-variant-numeric:tabular-nums;
+  }
+  .body{padding:14px 16px 16px}
+  .body h2{margin:0 0 5px;font-size:16px;font-weight:620;letter-spacing:-.01em}
+  .body p{margin:0 0 10px;color:var(--dim);font-size:13.5px;line-height:1.55}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tags span{
+    font-size:11.5px;color:var(--dim);border:1px solid var(--line);
+    background:var(--bg);padding:2px 8px;border-radius:4px;
+  }
+  footer{border-top:1px solid var(--line);padding:28px 0 56px;color:var(--dim);font-size:13.5px}
+  .empty{color:var(--dim);padding:40px 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/">Rison Guan</a>
+    <div class="lang" role="group">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1 data-i18n="title"></h1>
+    <p data-i18n="intro"></p>
+  </section>
+  <nav class="filters" id="filters"></nav>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden data-i18n="empty"></p>
+</main>
+
+<footer class="wrap"><span data-i18n="foot"></span></footer>
+
+<script>
+/* =====================================================================
+   1) 视频地址前缀
+      本地预览留空字符串 → 走相对路径 video/xxx.mp4
+      上线后改成： "https://video.rison.site/"
+   ===================================================================== */
+const CDN_BASE = "https://video.rison.site/";
+
+/* =====================================================================
+   2) 界面文案（加语言只需在这里加一组）
+   ===================================================================== */
+const UI = {
+  en:{
+    title:"Portfolio",
+    intro:"Selected project work from my time at Moviebook Technology — AI-generated video, virtual exhibitions, and large-format display systems.",
+    all:"All", empty:"No projects in this category yet.",
+    foot:"© 2026 Rison Guan"
+  },
+  zh:{
+    title:"项目作品",
+    intro:"影谱科技任职期间的部分项目记录 —— AI 视频生成、虚拟展会、大屏显示系统。",
+    all:"全部", empty:"该分类下暂无项目。",
+    foot:"© 2026 关瑞升"
+  }
+};
+
+/* =====================================================================
+   3) 项目数据 —— 以后加新项目，在这个数组里追加一条即可
+      file  : 视频文件名（不含 .mp4），poster 同名 .jpg
+      cat   : 分类 key，需在 CATS 中有对应译名
+      en/zh : 各语言的 title / desc
+   ===================================================================== */
+const CATS = {
+  ai:      {en:"AI Video",     zh:"AI 视频"},
+  exhibit: {en:"Exhibition",   zh:"展览展示"},
+  media:   {en:"Media",        zh:"媒体"},
+  display: {en:"Large Display",zh:"大屏系统"}
+};
+
+const PROJECTS = [
+  { file:"xunizhanhui", cat:"exhibit", dur:"4:45",
+    en:{t:"Virtual Exhibition Hall", d:"Web-based 3D exhibition space with guided navigation and interactive booths."},
+    zh:{t:"虚拟展会", d:"基于 Web 的三维展厅，支持导览动线与可交互展位。"},
+    tags:["3D","WebGL","Interactive"] },
+
+  { file:"yiqing", cat:"media", dur:"3:55",
+    en:{t:"Pandemic News Coverage", d:"Automated news video production pipeline for pandemic reporting."},
+    zh:{t:"疫情专题报道", d:"面向疫情报道的新闻视频自动化生产流程。"},
+    tags:["News","Automation"] },
+
+  { file:"guangmingwang-feiyi", cat:"media", dur:"2:56",
+    en:{t:"Guangming Daily — Intangible Heritage", d:"Web edition of the intangible cultural heritage feature for Guangming Online."},
+    zh:{t:"光明网 · 非遗专题", d:"为光明网制作的非物质文化遗产专题 WEB 版。"},
+    tags:["Culture","Web"] },
+
+  { file:"kerui", cat:"ai", dur:"1:56",
+    en:{t:"Kerui Project", d:"AI-driven video synthesis demonstration."},
+    zh:{t:"科锐项目", d:"AI 驱动的视频合成演示。"},
+    tags:["AI","Synthesis"] },
+
+  { file:"feigong", cat:"ai", dur:"0:57",
+    en:{t:"Feigong Project", d:"Generated video segment with automated scene composition."},
+    zh:{t:"飞公项目", d:"自动场景合成的生成式视频片段。"},
+    tags:["AI"] },
+
+  { file:"lingmou", cat:"ai", dur:"1:17",
+    en:{t:"Lingmou Project", d:"Visual recognition and content generation pipeline."},
+    zh:{t:"灵眸项目", d:"视觉识别与内容生成流程。"},
+    tags:["Vision","AI"] },
+
+  { file:"anfang", cat:"ai", dur:"1:41",
+    en:{t:"Public Security System", d:"Video analytics interface for security monitoring scenarios."},
+    zh:{t:"安防项目", d:"面向安防监控场景的视频分析界面。"},
+    tags:["Analytics","Security"] },
+
+  { file:"fangbao", cat:"ai", dur:"1:00",
+    en:{t:"Riot Control Training", d:"Simulation and training visualization module."},
+    zh:{t:"防暴演练", d:"演练模拟与可视化模块。"},
+    tags:["Simulation"] },
+
+  { file:"lianghui", cat:"media", dur:"0:15",
+    en:{t:"Two Sessions Coverage", d:"Short-form news clip generated for NPC & CPPCC coverage."},
+    zh:{t:"两会报道", d:"为全国两会报道生成的短视频片段。"},
+    tags:["News","Short-form"] },
+
+  { file:"bnd", cat:"ai", dur:"0:53",
+    en:{t:"BND Project", d:"Brand video generation demonstration."},
+    zh:{t:"BND 项目", d:"品牌视频生成演示。"},
+    tags:["Branding"] },
+
+  { file:"led-2f", cat:"display", dur:"1:00",
+    en:{t:"LED Wall — Floor 2", d:"Ultra-wide LED wall content, originally 6656×2016."},
+    zh:{t:"大屏系统 · 2F", d:"超宽 LED 拼接墙内容，原始分辨率 6656×2016。"},
+    tags:["LED","Ultra-wide"] },
+
+  { file:"led-4f", cat:"display", dur:"1:00",
+    en:{t:"LED Wall — Floor 4", d:"Ultra-wide LED wall content, originally 5632×1728."},
+    zh:{t:"大屏系统 · 4F", d:"超宽 LED 拼接墙内容，原始分辨率 5632×1728。"},
+    tags:["LED","Ultra-wide"] },
+
+  { file:"main-video-example", cat:"ai", dur:"0:34",
+    en:{t:"Product Demo Reel", d:"Representative output sample from the generation platform."},
+    zh:{t:"产品演示样片", d:"生成平台的代表性输出样例。"},
+    tags:["Demo"] },
+
+  { file:"vertical-demo", cat:"ai", dur:"0:15",
+    en:{t:"Vertical Format Demo", d:"Mobile-first vertical video output."},
+    zh:{t:"竖版视频演示", d:"面向移动端的竖版视频输出。"},
+    tags:["Vertical","Mobile"] }
+];
+
+/* ===================== 以下为渲染逻辑，加项目无需改动 ===================== */
+
+let lang = "en", filter = "all";
+try { lang = localStorage.getItem("rison-lang") || "en"; } catch(e) {}
+
+const $grid = document.getElementById("grid");
+const $filters = document.getElementById("filters");
+const $empty = document.getElementById("empty");
+
+const PLAY_ICON =
+  '<svg viewBox="0 0 68 48" aria-hidden="true">' +
+  '<path fill="rgba(0,0,0,.55)" d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.7a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.7a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z"/>' +
+  '<path fill="#fff" d="M27 34V14l18 10-18 10z"/></svg>';
+
+function render(){
+  const t = UI[lang];
+  document.documentElement.lang = (lang === "zh" ? "zh-CN" : "en");
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t[el.dataset.i18n]; });
+
+  // 分类按钮
+  const keys = ["all", ...Object.keys(CATS)];
+  $filters.innerHTML = keys.map(k => {
+    const label = (k === "all") ? t.all : CATS[k][lang];
+    return `<button type="button" data-cat="${k}" aria-pressed="${k===filter}">${label}</button>`;
+  }).join("");
+
+  // 卡片
+  const list = PROJECTS.filter(p => filter === "all" || p.cat === filter);
+  $empty.hidden = list.length > 0;
+  $grid.innerHTML = list.map(p => {
+    const L = p[lang];
+    return `<article class="card" data-file="${p.file}">
+      <div class="frame">
+        <img src="${CDN_BASE}poster/${p.file}.jpg" alt="${L.t}" loading="lazy" decoding="async">
+        <video preload="none" controls playsinline
+               poster="${CDN_BASE}poster/${p.file}.jpg">
+          <source src="${CDN_BASE}video/${p.file}.mp4" type="video/mp4">
+        </video>
+        <div class="play">${PLAY_ICON}</div>
+        <span class="dur">${p.dur}</span>
+      </div>
+      <div class="body">
+        <h2>${L.t}</h2>
+        <p>${L.d}</p>
+        <div class="tags">${p.tags.map(x => `<span>${x}</span>`).join("")}</div>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+// 点击封面才加载视频 —— 未点击的卡片不消耗任何流量
+$grid.addEventListener("click", e => {
+  const frame = e.target.closest(".frame");
+  if (!frame) return;
+  const card = frame.closest(".card");
+  if (card.classList.contains("playing")) return;
+  card.classList.add("playing");
+  const v = frame.querySelector("video");
+  v.load();
+  v.play().catch(() => {});   // 浏览器拦截自动播放时静默失败，用户可再点一次
+});
+
+$filters.addEventListener("click", e => {
+  const b = e.target.closest("button[data-cat]");
+  if (!b) return;
+  filter = b.dataset.cat;
+  render();
+});
+
+document.querySelector(".lang").addEventListener("click", e => {
+  const b = e.target.closest("button[data-lang]");
+  if (!b) return;
+  lang = b.dataset.lang;
+  try { localStorage.setItem("rison-lang", lang); } catch(err) {}
+  document.querySelectorAll(".lang button").forEach(x =>
+    x.setAttribute("aria-pressed", String(x.dataset.lang === lang)));
+  render();
+});
+
+document.querySelectorAll(".lang button").forEach(x =>
+  x.setAttribute("aria-pressed", String(x.dataset.lang === lang)));
+render();
+</script>
+</body>
+</html>
