@@ -1,0 +1,330 @@
+/* Rison Guan — Resume
+   Clean, minimal, single-scroll layout. */
+
+:root {
+    --ink: #16181d;
+    --body: #4b4f58;
+    --muted: #8a8f98;
+    --accent: #0077cc;
+    --bg: #ffffff;
+    --bg-soft: #f7f8fa;
+    --border: #e6e8eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.identity h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+
+.identity .title {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.contact-list li {
+    white-space: nowrap;
+}
+
+.contact-list a {
+    color: var(--muted);
+}
+
+.contact-list a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-list i {
+    width: 14px;
+    text-align: center;
+    margin-right: 4px;
+    color: var(--accent);
+}
+
+/* ---------- Main layout ---------- */
+
+.resume {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+}
+
+.block {
+    margin-bottom: 40px;
+}
+
+.block:last-child {
+    margin-bottom: 0;
+}
+
+.block h2 {
+    margin: 0 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar .edu-item h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    color: var(--ink);
+}
+
+.sidebar .edu-item .meta {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.sidebar .edu-item .role {
+    margin: 0 0 6px;
+    font-style: italic;
+    color: var(--body);
+}
+
+.sidebar .edu-item p {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.skill-group {
+    margin-bottom: 18px;
+}
+
+.skill-group:last-child {
+    margin-bottom: 0;
+}
+
+.skill-group h3 {
+    margin: 0 0 4px;
+    font-size: 13px;
+    color: var(--ink);
+}
+
+.skill-group p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--body);
+    line-height: 1.6;
+}
+
+/* ---------- Content ---------- */
+
+.content .block > p {
+    margin: 0 0 14px;
+}
+
+.content .block > p:last-child {
+    margin-bottom: 0;
+}
+
+.job {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.job:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.job:first-child {
+    padding-top: 0;
+}
+
+.job-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px 24px;
+    margin-bottom: 12px;
+}
+
+.job-head h3 {
+    margin: 0 0 2px;
+    font-size: 17px;
+    color: var(--ink);
+}
+
+.job-head .company {
+    margin: 0;
+    font-size: 14px;
+    color: var(--body);
+}
+
+.job-head .company span {
+    color: var(--muted);
+}
+
+.job-head .dates {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.5;
+}
+
+.job ul li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.job ul li:last-child {
+    margin-bottom: 0;
+}
+
+.job ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg-soft);
+}
+
+.site-footer .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.site-footer ul {
+    display: flex;
+    gap: 16px;
+}
+
+.site-footer a {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.site-footer a:hover {
+    color: var(--accent);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+    .resume {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 36px 20px 48px;
+    }
+
+    .header-inner {
+        padding: 20px;
+    }
+
+    .job-head .dates {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .identity h1 {
+        font-size: 20px;
+    }
+
+    .contact-list {
+        font-size: 12px;
+    }
+}
